@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name" translatable="false">تكنو أكاديمى</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question">Question</string>
+    <string name="play_again">Play again</string>
+
+    <string name="time">15</string>
+    <string name="correct">Correct</string>
+    <string name="wrongans">Opps the ans was wrong</string>
+    <string name="timeup">Time Up</string>
+    <string name="play_game">Play Game</string>
+    <string name="quit">Quit</string>
+    <string name="next">Next</string>
+    <string name="cancel">✖</string>
+    <string-array name="subjects">
+        <item>اختر المادة</item>
+        <item>كيمياء</item>
+        <item>فيزياء</item>
+        <item>أحياء</item>
+        <item>رياضيات</item>
+        <item>إحصاء واقتصاد</item>
+        <item>مواد أخرى</item>
+    </string-array>
+    <string-array name="levels">
+        <item>اختر الصف الدراسى</item>
+        <item>الصف الأول الثانوى</item>
+        <item>الصف الثانى الثانوى</item>
+        <item>الصف الثالث الثانوى</item>
+    </string-array>
+</resources>

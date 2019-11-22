@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="اضافة ملف"
+        android:id="@+id/add_teacher"
+        />
+
+    <item
+        android:title="اضافة امتحان"
+        android:id="@+id/add_exam"
+        />
+
+    <item
+        android:title="اضافة مجموعة"
+        android:id="@+id/add_gp"
+        />
+
+    <item
+        android:title="تسجيل خروج"
+        android:id="@+id/logout"
+        />
+
+</menu>

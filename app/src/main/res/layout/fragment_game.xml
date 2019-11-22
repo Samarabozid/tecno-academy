@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentApp.Fragments.GameFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:gravity="center"
+       android:layout_margin="20dp">
+       <com.balysv.materialripple.MaterialRippleLayout
+           style="@style/rippleGray"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="30dp"
+           >
+
+           <Button
+               android:id="@+id/play"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@drawable/login_btn_corners"
+               android:text="ابدأ اللعب"
+               android:textColor="#fff"
+               android:textSize="20dp"
+               android:textStyle="bold"
+               />
+
+       </com.balysv.materialripple.MaterialRippleLayout>
+
+   </LinearLayout>
+
+</FrameLayout>

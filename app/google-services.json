@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "210162967235",
+    "firebase_url": "https://tecnoacademy-71461.firebaseio.com",
+    "project_id": "tecnoacademy-71461",
+    "storage_bucket": "tecnoacademy-71461.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210162967235:android:152734cb387c5fc5",
+        "android_client_info": {
+          "package_name": "tecno.academy.TecnoAcademy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210162967235-jp2390iok4cah48caidm8pmbr0a3ck2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tecno.academy.TecnoAcademy",
+            "certificate_hash": "0f29110d06576a9e73253d2ce3d9fb0200c58a86"
+          }
+        },
+        {
+          "client_id": "210162967235-d99q0foacoimhishulibpr4i6ucvdh8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqzV4gJQbwG6oUCnDZohmRndAtH-8IfPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210162967235-d99q0foacoimhishulibpr4i6ucvdh8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

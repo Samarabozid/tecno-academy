@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/kanyamakan</item>
+    </style>
+
+
+    <style name="rippleWhite">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleAlpha">0.4</item>
+        <item name="mrl_rippleColor">#fff</item>
+    </style>
+
+    <style name="rippleGray">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleAlpha">0.4</item>
+        <item name="mrl_rippleColor">#C8C8C8</item>
+    </style>
+
+    <style name="text" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text1" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+
+
+</resources>
