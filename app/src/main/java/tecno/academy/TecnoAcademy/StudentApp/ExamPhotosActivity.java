@@ -6,20 +6,12 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -27,17 +19,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import tecno.academy.TecnoAcademy.Models.GroupModel;
 import tecno.academy.TecnoAcademy.Models.QuestionModel;
-import tecno.academy.TecnoAcademy.Models.TeacherModel;
 import tecno.academy.TecnoAcademy.R;
-import tecno.academy.TecnoAcademy.TeacherApp.Fragments.MyExamFragment;
 
-public class ExamsActivity extends AppCompatActivity
+public class ExamPhotosActivity extends AppCompatActivity
 {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
@@ -46,22 +36,22 @@ public class ExamsActivity extends AppCompatActivity
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-    List<QuestionModel> ee;
-    examAdapter adapter;
-
-    ArrayList<String> keys ;
-    String k;
+    List<QuestionModel> list;
+    imageAdapter imageAdapter;
+    String key,teacher_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exams);
+        setContentView(R.layout.activity_exam_photos);
 
-        k = getIntent().getExtras().getString("ex");
-        //Log.d("id_examAct","exam activity "+k);
+        key = getIntent().getStringExtra("ex");
+        teacher_id = getIntent().getStringExtra("te");
 
-        recyclerView = findViewById(R.id.recyclerview1);
+        recyclerView = findViewById(R.id.recyclerview);
+
+        list = new ArrayList<>();
 
         layoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false);
         dividerItemDecoration = new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL);
@@ -72,72 +62,55 @@ public class ExamsActivity extends AppCompatActivity
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
 
-        ee = new ArrayList<>();
-        keys  =  new ArrayList<>() ;
-
-        databaseReference.child("Exams").child(k).addValueEventListener(new ValueEventListener()
+        databaseReference.child("ExamPhotos").child(teacher_id).child(key).addValueEventListener(new ValueEventListener()
         {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
-                ee.clear();
+                list.clear();
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren())
                 {
-                    QuestionModel questionModel = snapshot.getValue(QuestionModel.class);
-                    String examKey = snapshot.getKey() ;
-                    keys.add(examKey);
-                    ee.add(questionModel);
+                    QuestionModel q = snapshot.getValue(QuestionModel.class);
+                    list.add(q);
                 }
 
-                adapter = new examAdapter(ee);
-                recyclerView.setAdapter(adapter);
+                imageAdapter = new imageAdapter(list);
+                recyclerView.setAdapter(imageAdapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError)
             {
-
             }
         });
     }
 
-    class examAdapter extends RecyclerView.Adapter<examAdapter.examVH>
+    class imageAdapter extends RecyclerView.Adapter<imageAdapter.imageVH>
     {
         List<QuestionModel> questionModels;
 
-        examAdapter(List<QuestionModel> questionModels)
+        imageAdapter(List<QuestionModel> questionModels)
         {
             this.questionModels = questionModels;
         }
 
         @NonNull
         @Override
-        public examAdapter.examVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+        public imageAdapter.imageVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
         {
-            View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.student_exam_item, parent, false);
-            return new examAdapter.examVH(view);
+            View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.image_item, parent, false);
+            return new imageAdapter.imageVH(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull examAdapter.examVH holder, final int position)
+        public void onBindViewHolder(@NonNull imageAdapter.imageVH holder, final int position)
         {
             QuestionModel questionModel = questionModels.get(position);
 
-            String name = questionModel.getEx_title();
-
-            holder.title.setText(name);
-            holder.linearLayout.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View view)
-                {
-                    Intent i = new Intent(getApplicationContext(), StartExamActivity.class);
-                    i.putExtra("ex",keys.get(position));
-                    i.putExtra("te" , k);
-                    startActivity(i);
-                }
-            });
+            Picasso.get()
+                    .load(questionModel.getImageUrl())
+                    .into(holder.image);
         }
 
         @Override
@@ -145,18 +118,22 @@ public class ExamsActivity extends AppCompatActivity
             return questionModels.size();
         }
 
-        class examVH extends RecyclerView.ViewHolder
+        class imageVH extends RecyclerView.ViewHolder
         {
             TextView title;
-            LinearLayout linearLayout;
+            ImageView image;
 
-            public examVH(@NonNull View itemView)
+            public imageVH(@NonNull View itemView)
             {
                 super(itemView);
 
+                image = itemView.findViewById(R.id.exam_photo);
                 title = itemView.findViewById(R.id.exam_title);
-                linearLayout = itemView.findViewById(R.id.exam_lin);
             }
         }
+    }
+    String getuId()
+    {
+        return FirebaseAuth.getInstance().getUid();
     }
 }

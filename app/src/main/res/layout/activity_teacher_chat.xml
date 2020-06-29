@@ -32,7 +32,7 @@
             android:padding="10dp"
             android:textDirection="rtl"
             android:hint="اكتب رسالة"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="10dp"
             />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

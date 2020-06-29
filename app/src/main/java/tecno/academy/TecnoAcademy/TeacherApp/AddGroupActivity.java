@@ -22,7 +22,7 @@ public class AddGroupActivity extends AppCompatActivity
     EditText title_field,date_field,time_field;
     Button add;
 
-    String title,date,time;
+    String id,title,date,time;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -75,10 +75,11 @@ public class AddGroupActivity extends AppCompatActivity
 
     private void addGp(String title, String date, String time)
     {
-        GroupModel groupModel = new GroupModel(title,date,time);
+        id = databaseReference.child("Groups").child(getuId()).push().getKey();
 
-        String k = databaseReference.child("Groups").child(getuId()).push().getKey();
-        databaseReference.child("Groups").child(getuId()).child(k).setValue(groupModel);
+        GroupModel groupModel = new GroupModel(id,title,date,time);
+
+        databaseReference.child("Groups").child(getuId()).child(id).setValue(groupModel);
 
         startActivity(new Intent(getApplicationContext(), TeacherMainActivity.class));
         finish();

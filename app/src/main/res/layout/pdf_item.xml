@@ -6,20 +6,32 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical|end"
+    android:gravity="center_vertical"
     android:padding="15dp"
     >
 
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_delete_forever_black_24dp"
+        />
+
     <TextView
         android:id="@+id/pdf_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="title"
         android:layout_marginEnd="22dp"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:gravity="right"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
         android:textColor="#000"
         android:layout_marginRight="20dp"
+        android:layout_marginLeft="5dp"
         />
 
     <ImageView

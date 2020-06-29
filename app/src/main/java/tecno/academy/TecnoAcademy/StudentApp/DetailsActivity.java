@@ -108,16 +108,6 @@ public class DetailsActivity extends AppCompatActivity
                         .setTitle("مكالمة فيديو")
                         .setMessage("من فضلك اتواصل مع المدرس عشان تحجز معاه محاضره اونلاين")
                         .setPositiveButton("ok", null).show();
-                             /*  , new DialogInterface.OnClickListener()
-                        {
-                            public void onClick(DialogInterface dialog, int which)
-                            {
-                                String url = "https://www.skype.com/en/";
-                                Intent i = new Intent(Intent.ACTION_VIEW);
-                                i.setData(Uri.parse(url));
-                                startActivity(i);
-                            }
-                        })*/
             }
         });
 
@@ -139,8 +129,6 @@ public class DetailsActivity extends AppCompatActivity
             {
                 Intent intent = new Intent(getApplicationContext(), ExamsActivity.class);
                 intent.putExtra("ex", teacherModel.getTeacher_id());
-                //Log.d("id",teacherModel.getTeacher_id());
-               // Log.d("teacherid","Details Activity 2 " + teacherModel.getTeacher_id());
                 startActivity(intent);
             }
         });

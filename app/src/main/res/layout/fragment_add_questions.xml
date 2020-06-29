@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TeacherApp.TeacherExams.AddExamActivity">
-
+    tools:context=".TeacherApp.TeacherExam.AddQuestionsFragment">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/studying"
-        android:alpha=".3"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
+        android:alpha=".1"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
         />
 
     <ScrollView
@@ -28,1175 +25,1228 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="15dp"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="start"
+                    android:textSize="22sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittext_corners"
+                    android:hint="اسم الامتحان "
+                    android:padding="20dp"
+                    android:textDirection="rtl"
+                    android:textStyle="bold"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
+                    />
+
+                <EditText
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittext_corners"
+                    android:hint="score "
+                    android:visibility="invisible"
+                    android:padding="20dp"
+                    android:textDirection="rtl"
+                    android:textStyle="bold"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الأول"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
 
             <EditText
-                android:id="@+id/quiz_title"
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" السؤال الأول"
+                android:padding="20dp"
+                android:textDirection="rtl"
+                android:textStyle="bold"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                />
+
+            <EditText
+                android:id="@+id/option1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:textSize="22sp"
-                android:hint="اسم الامتحان"
                 android:background="@drawable/edittext_corners"
+                android:hint="الاختيار الاول"
+                android:textSize="18sp"
+                android:padding="20dp"
+                android:textDirection="rtl"
+                android:textStyle="bold"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"/>
+
+            <EditText
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الثانى"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/txt_ques1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/edittext_corners"
-                android:hint=" السؤال الأول"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:textSize="18sp"
-                android:textColor="#000"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <ImageView
-                android:id="@+id/img1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
-                />
-
-
-            <EditText
-                android:id="@+id/ansA"
+                android:id="@+id/option3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
-
-            <EditText
-                android:id="@+id/ansB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginBottom="10dp"
-                android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
-
-            <EditText
-                android:id="@+id/ansC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginBottom="10dp"
                 android:hint=" الاختيار الثالث"
                 android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD"
+                android:id="@+id/option4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                />
 
             <EditText
-                android:id="@+id/correct1"
+                android:id="@+id/correct_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorPrimary" />
 
-
-            <EditText
-                android:id="@+id/txt_ques2"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:text="السؤال الثانى"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <EditText
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:hint=" السؤال الثانى"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
-                android:textColor="#000"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <ImageView
-                android:id="@+id/img2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
-                />
+                android:textStyle="bold" />
 
 
             <EditText
-                android:id="@+id/ansA2"
+                android:id="@+id/option21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
-                android:background="@drawable/edittext_corners"
                 android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansB2"
+                android:id="@+id/option22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
+                android:padding="20dp"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
-                android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC2"
+                android:id="@+id/option23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثالث"
                 android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
-
+                android:textStyle="bold" />
             <EditText
-                android:id="@+id/ansD2"
+                android:id="@+id/option24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/correct2"
+                android:id="@+id/correct_answer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorPrimary" />
 
-
-            <EditText
-                android:id="@+id/txt_ques3"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:text="السؤال الثالث"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <EditText
+                android:id="@+id/question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:hint=" السؤال الثالث"
-                android:textSize="18sp"
-                android:textColor="#000"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
-
-            <ImageView
-                android:id="@+id/img3"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
-                />
 
             <EditText
-                android:id="@+id/ansA3"
+                android:id="@+id/option31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansB3"
+                android:id="@+id/option32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاختيار الثانى"
+                android:textSize="18sp"
                 android:background="@drawable/edittext_corners"
+                android:hint="الاختيار الثانى"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC3"
+                android:id="@+id/option33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاختيار الثالث"
-                android:inputType="textMultiLine"
                 android:background="@drawable/edittext_corners"
+                android:hint="الاختيار الثالث"
+                android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD3"
+                android:id="@+id/option34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
+
 
             <EditText
-                android:id="@+id/correct3"
+                android:id="@+id/correct_answer3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint="الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorPrimary" />
 
-            <EditText
-                android:id="@+id/txt_ques4"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:text="السؤال الرابع"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <EditText
+                android:id="@+id/question4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:hint=" السؤال الرابع"
-                android:padding="20dp"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
-                android:textColor="#000"
+                android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/img4"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
-                />
 
             <EditText
-                android:id="@+id/ansA4"
+                android:id="@+id/option41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansB4"
+                android:id="@+id/option42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC4"
+                android:id="@+id/option43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثالث"
                 android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD4"
+                android:id="@+id/option44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/correct4"
+                android:id="@+id/correct_answer4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray"/>
+                android:background="@color/colorPrimary" />
 
-            <EditText
-                android:id="@+id/txt_ques5"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittext_corners"
-                android:hint="السؤال الخامس"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:padding="20dp"
-                android:textSize="18sp"
+                android:text="السؤال الخامس"
+                android:textSize="22sp"
                 android:textColor="#000"
-                android:textDirection="rtl"
+                android:padding="10dp"
                 android:textStyle="bold"
+                android:layout_gravity="right"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <ImageView
-                android:id="@+id/img5"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 />
 
-
             <EditText
-                android:id="@+id/ansA5"
-                android:layout_width="wrap_content"
+                android:id="@+id/question5"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
+                android:hint=" السؤال الخامس"
                 android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
+
 
             <EditText
-                android:id="@+id/ansB5"
+                android:id="@+id/option51"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/option52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC5"
+                android:id="@+id/option53"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثالث"
-                android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
-                android:scrollbars="vertical"
                 android:textSize="18sp"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD5"
+                android:id="@+id/option54"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/correct5"
+                android:id="@+id/correct_answer5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
+                android:textSize="18sp"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorPrimary" />
 
-
-            <EditText
-                android:id="@+id/txt_ques6"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittext_corners"
-                android:hint="السؤال السادس"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:textSize="18sp"
+                android:text="السؤال السادس"
+                android:textSize="22sp"
                 android:textColor="#000"
-                android:padding="20dp"
-                android:textDirection="rtl"
+                android:padding="10dp"
                 android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <ImageView
-                android:id="@+id/img6"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
                 />
 
             <EditText
-                android:id="@+id/ansA6"
-                android:layout_width="wrap_content"
+                android:id="@+id/question6"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
+                android:hint=" السؤال السادس"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
+
 
             <EditText
-                android:id="@+id/ansB6"
+                android:id="@+id/option61"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:textSize="18sp"
+                android:padding="20dp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/option62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC6"
+                android:id="@+id/option63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثالث"
                 android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD6"
+                android:id="@+id/option64"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/correct6"
+                android:id="@+id/correct_answer6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorPrimary" />
 
-
-            <EditText
-                android:id="@+id/txt_ques7"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittext_corners"
-                android:hint="السؤال السابع"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:textSize="18sp"
+                android:text="السؤال السابع"
+                android:layout_marginTop="5dp"
+                android:textSize="22sp"
                 android:textColor="#000"
-                android:padding="20dp"
-                android:textDirection="rtl"
+                android:padding="10dp"
                 android:textStyle="bold"
+                android:layout_gravity="right"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <ImageView
-                android:id="@+id/img7"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
                 />
 
             <EditText
-                android:id="@+id/ansA7"
-                android:layout_width="wrap_content"
+                android:id="@+id/question7"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
+                android:hint=" السؤال السابع"
                 android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansB7"
+                android:id="@+id/option71"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/option72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC7"
+                android:id="@+id/option73"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثالث"
                 android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD7"
+                android:id="@+id/option74"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/correct7"
+                android:id="@+id/correct_answer7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorPrimary" />
 
-            <EditText
-                android:id="@+id/txt_ques8"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittext_corners"
-                android:hint="السؤال الثامن"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:textSize="18sp"
+                android:text="السؤال الثامن"
+                android:textSize="22sp"
                 android:textColor="#000"
-                android:padding="20dp"
-                android:textDirection="rtl"
+                android:padding="10dp"
                 android:textStyle="bold"
+                android:layout_gravity="right"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <ImageView
-                android:id="@+id/img8"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 />
 
             <EditText
-                android:id="@+id/ansA8"
-                android:layout_width="wrap_content"
+                android:id="@+id/question8"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
+                android:hint=" السؤال الثامن"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansB8"
+                android:id="@+id/option81"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/option82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC8"
+                android:id="@+id/option83"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثالث"
                 android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD8"
+                android:id="@+id/option84"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/correct8"
+                android:id="@+id/correct_answer8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorPrimary" />
 
-            <EditText
-                android:id="@+id/txt_ques9"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittext_corners"
-                android:hint="السؤال التاسع"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:textSize="18sp"
+                android:text="السؤال التاسع"
+                android:textSize="22sp"
                 android:textColor="#000"
-                android:padding="20dp"
-                android:textDirection="rtl"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
                 android:textStyle="bold"
+                android:layout_gravity="right"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <ImageView
-                android:id="@+id/img9"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
                 />
 
             <EditText
-                android:id="@+id/ansA9"
-                android:layout_width="wrap_content"
+                android:id="@+id/question9"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
+                android:hint=" السؤال التاسع"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansB9"
+                android:id="@+id/option91"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:padding="20dp"
+                android:textDirection="rtl"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/option92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC9"
+                android:id="@+id/option93"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثالث"
                 android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD9"
+                android:id="@+id/option94"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/correct9"
+                android:id="@+id/correct_answer9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
+                android:textSize="18sp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@color/colorPrimary" />
 
-            <EditText
-                android:id="@+id/txt_ques10"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/edittext_corners"
-                android:hint="السؤال العاشر"
-                android:inputType="textMultiLine"
-                android:scrollbars="vertical"
-                android:textSize="18sp"
+                android:text="السؤال العاشر"
+                android:textSize="22sp"
                 android:textColor="#000"
-                android:padding="20dp"
-                android:textDirection="rtl"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
                 android:textStyle="bold"
+                android:layout_gravity="right"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <ImageView
-                android:id="@+id/img10"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/addphoto"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
                 />
 
-
             <EditText
-                android:id="@+id/ansA10"
-                android:layout_width="wrap_content"
+                android:id="@+id/question10"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:hint="الاختيار الاول"
                 android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
+                android:hint=" السؤال العاشر"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansB10"
+                android:id="@+id/option101"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
+                android:hint=" الاختيار الاول"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/option102"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثانى"
-                android:background="@drawable/edittext_corners"
+                android:textSize="18sp"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansC10"
+                android:id="@+id/option103"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الثالث"
                 android:inputType="textMultiLine"
-                android:background="@drawable/edittext_corners"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ansD10"
+                android:id="@+id/option104"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/edittext_corners"
                 android:hint=" الاختيار الرابع"
-                android:background="@drawable/edittext_corners"
-                android:textSize="18sp"
-                android:padding="20dp"
-                android:textDirection="rtl"
-                android:textStyle="bold"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:layout_marginRight="10dp"/>
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textDirection="rtl"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/correct10"
+                android:id="@+id/correct_answer10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"
-                android:hint=" الاجابه الصحيحه"
                 android:background="@drawable/edittext_corners"
+                android:hint=" الاجابه الصحيحه"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:padding="20dp"
                 android:textDirection="rtl"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+                android:textStyle="bold" />
 
             <com.balysv.materialripple.MaterialRippleLayout
                 style="@style/rippleWhite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="25dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
 
                 <Button
-                    android:id="@+id/done"
+                    android:id="@+id/create_exam"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorAccent"
-                    android:text="حفظ الامتحان"
+                    android:text="إنشاء امتحان"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
             </com.balysv.materialripple.MaterialRippleLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="أنشىء الامتحان ثم أضف الصور "
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/add"
+                    android:layout_gravity="center|center_vertical"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+
+                    <Button
+                        android:id="@+id/upload_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ارفع الصوره"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_corners"
+                        android:textColor="#fff"
+                        android:layout_marginBottom="20dp"/>
+
+                    <Button
+                        android:id="@+id/view_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="عرض الصور"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_corners"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
+
 
     </ScrollView>
 
-</RelativeLayout>
+
+</FrameLayout>

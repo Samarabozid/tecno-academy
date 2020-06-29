@@ -65,14 +65,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:textSize="20sp"
-                    android:text="10  /"
                     android:padding="10dp"
+                    android:text="10  /"
                     android:textDirection="rtl"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الأول"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
 
             <TextView
                 android:id="@+id/txt_ques1"
@@ -81,7 +96,8 @@
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 1"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:padding="10dp"
@@ -91,14 +107,11 @@
                 android:layout_marginRight="10dp"/>
 
             <ImageView
-                android:id="@+id/image1"
+                android:id="@+id/img1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct1"
@@ -110,7 +123,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -120,30 +133,36 @@
 
                 <RadioButton
                     android:id="@+id/ansA"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansB"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
                     android:layoutDirection="rtl"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansC"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -151,10 +170,12 @@
 
                 <RadioButton
                     android:id="@+id/ansD"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -168,6 +189,21 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الثانى"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -175,7 +211,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 2"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:padding="10dp"
@@ -184,16 +221,12 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
 
-
             <ImageView
-                android:id="@+id/image2"
+                android:id="@+id/img2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct2"
@@ -206,7 +239,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -216,30 +249,36 @@
 
                 <RadioButton
                     android:id="@+id/ansA2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansB2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansC2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -247,9 +286,11 @@
 
                 <RadioButton
                     android:id="@+id/ansD2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -264,6 +305,21 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الثالث"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -271,26 +327,22 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 3"
-                android:inputType="text"
                 android:textSize="18sp"
                 android:textColor="#000"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
 
-
             <ImageView
-                android:id="@+id/image3"
+                android:id="@+id/img3"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct3"
@@ -302,19 +354,23 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:layout_gravity="right"
                 android:layout_marginBottom="30dp"
                 >
 
                 <RadioButton
                     android:id="@+id/ansA3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -322,19 +378,23 @@
                     />
                 <RadioButton
                     android:id="@+id/ansB3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansC3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -342,10 +402,12 @@
                     />
                 <RadioButton
                     android:id="@+id/ansD3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -358,6 +420,21 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الرابع"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -365,8 +442,9 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 4"
-                android:inputType="text"
                 android:padding="10dp"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:textDirection="rtl"
@@ -375,14 +453,11 @@
                 android:layout_marginRight="10dp"/>
 
             <ImageView
-                android:id="@+id/image4"
+                android:id="@+id/img4"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct4"
@@ -394,7 +469,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup4"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -404,29 +479,35 @@
 
                 <RadioButton
                     android:id="@+id/ansA4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansB4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansC4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -435,10 +516,12 @@
 
                 <RadioButton
                     android:id="@+id/ansD4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -452,6 +535,21 @@
                 android:background="@android:color/darker_gray"/>
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الخامس"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -459,7 +557,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text="Question 5"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:padding="10dp"
                 android:textSize="18sp"
                 android:textColor="#000"
@@ -469,14 +568,11 @@
                 android:layout_marginRight="10dp"/>
 
             <ImageView
-                android:id="@+id/image5"
+                android:id="@+id/img5"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct5"
@@ -489,7 +585,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup5"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -498,19 +594,23 @@
 
                 <RadioButton
                     android:id="@+id/ansA5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansB5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -518,10 +618,12 @@
                     />
                 <RadioButton
                     android:id="@+id/ansC5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -529,9 +631,11 @@
 
                 <RadioButton
                     android:id="@+id/ansD5"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -546,6 +650,21 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال السادس"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -553,7 +672,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 6"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:padding="10dp"
@@ -562,17 +682,12 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
 
-
             <ImageView
-                android:id="@+id/image6"
+                android:id="@+id/img6"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct6"
@@ -585,7 +700,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup6"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -595,30 +710,36 @@
 
                 <RadioButton
                     android:id="@+id/ansA6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansB6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansC6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -626,10 +747,12 @@
 
                 <RadioButton
                     android:id="@+id/ansD6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -643,6 +766,21 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال السابع"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -650,7 +788,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 7"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:padding="10dp"
@@ -660,15 +799,11 @@
                 android:layout_marginRight="10dp"/>
 
             <ImageView
-                android:id="@+id/image7"
+                android:id="@+id/img7"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct7"
@@ -681,7 +816,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup7"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -691,19 +826,23 @@
 
                 <RadioButton
                     android:id="@+id/ansA7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansB7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -711,10 +850,12 @@
                     />
                 <RadioButton
                     android:id="@+id/ansC7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -722,10 +863,12 @@
 
                 <RadioButton
                     android:id="@+id/ansD7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -739,6 +882,21 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الثامن"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -746,7 +904,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 8"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:padding="10dp"
@@ -756,15 +915,11 @@
                 android:layout_marginRight="10dp"/>
 
             <ImageView
-                android:id="@+id/image8"
+                android:id="@+id/img8"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct8"
@@ -777,7 +932,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup8"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -787,41 +942,49 @@
 
                 <RadioButton
                     android:id="@+id/ansA8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansB8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansC8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
 
                 <RadioButton
                     android:id="@+id/ansD8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -835,6 +998,21 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال التاسع"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -842,7 +1020,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 9"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:padding="10dp"
@@ -852,15 +1031,11 @@
                 android:layout_marginRight="10dp"/>
 
             <ImageView
-                android:id="@+id/image9"
+                android:id="@+id/img9"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct9"
@@ -873,7 +1048,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup9"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -883,30 +1058,36 @@
 
                 <RadioButton
                     android:id="@+id/ansA9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansB9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansC9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -914,10 +1095,12 @@
 
                 <RadioButton
                     android:id="@+id/ansD9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
@@ -931,6 +1114,21 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال العاشر"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
                 android:id="@+id/txt_ques10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -938,7 +1136,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
                 android:text=" Question 10"
-                android:inputType="text"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:padding="10dp"
@@ -948,15 +1147,11 @@
                 android:layout_marginRight="10dp"/>
 
             <ImageView
-                android:id="@+id/image10"
+                android:id="@+id/img10"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/addphoto"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
+                android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/correct10"
@@ -969,7 +1164,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroup10"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -979,9 +1174,11 @@
 
                 <RadioButton
                     android:id="@+id/ansA10"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer a"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -989,19 +1186,23 @@
                     />
                 <RadioButton
                     android:id="@+id/ansB10"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer b"
                     android:textSize="18sp"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
                 <RadioButton
                     android:id="@+id/ansC10"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer c"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -1010,9 +1211,11 @@
 
                 <RadioButton
                     android:id="@+id/ansD10"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="answer D"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
                     android:textSize="18sp"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
@@ -1052,8 +1255,6 @@
                     android:textStyle="bold" />
 
             </com.balysv.materialripple.MaterialRippleLayout>
-
-
 
         </LinearLayout>
 

@@ -11,7 +11,6 @@ import java.util.List;
 
 public class TriviaQuizHelper extends SQLiteOpenHelper
 {
-
     private Context context;
     private static final String DB_NAME = "TQuiz.db";
 
@@ -60,21 +59,21 @@ public class TriviaQuizHelper extends SQLiteOpenHelper
     public void allQuestion() {
         ArrayList<TriviaQuestion> arraylist = new ArrayList<>();
 
-        arraylist.add(new TriviaQuestion("Galileo was an Italian astronomer who developed?", "Telescope", "Airoplane", "Electricity", "Train", "Telescope"));
+        arraylist.add(new TriviaQuestion("طور العالم غاليليو عالم فلك إيطالى؟", "تلسكوب", "طائره", "الكهرباء", "القطار", "تلسكوب"));
 
-        arraylist.add(new TriviaQuestion("Who is the father of Geometry ?", "Aristotle", "Euclid", "Pythagoras", "Kepler", "Euclid"));
+        arraylist.add(new TriviaQuestion("من هو العالم الملقب بوالد الهندسة؟", "أرسطو", "إقليدس", "فيثاغورس", "كبلر", "إقليدس"));
 
         arraylist.add(new TriviaQuestion("Who was known as Iron man of India ?", "Govind Ballabh Pant", "Jawaharlal Nehru", "Subhash Chandra Bose", "Sardar Vallabhbhai Patel", "Sardar Vallabhbhai Patel"));
 
-        arraylist.add(new TriviaQuestion("The first woman in space was ?", "Valentina Tereshkova", "Sally Ride", "Naidia Comenci", "Tamara Press", "Valentina Tereshkova"));
+        arraylist.add(new TriviaQuestion("من هى أول امرأة في الفضاء؟", "فالنتينا تيريشكوفا" , "سالي رايد" , "نادية كومانيكي" , "تمارا برس" ,"فالنتينا تيريشكوفا"));
 
         arraylist.add(new TriviaQuestion("Who is the Flying Sikh of India ?", "Mohinder Singh", "Joginder Singh", "Ajit Pal Singh", "Milkha singh", "Milkha singh"));
 
         arraylist.add(new TriviaQuestion("The Indian to beat the computers in mathematical wizardry is", "Ramanujam", "Rina Panigrahi", "Raja Ramanna", "Shakunthala Devi", "Shakunthala Devi"));
 
-        arraylist.add(new TriviaQuestion("Who is Larry Pressler ?", "Politician", "Painter", "Actor", "Tennis player", "Politician"));
+        arraylist.add(new TriviaQuestion("من هو لاري بريسلر؟ ","سياسى","رسام","ممثل","لاعب تنس","سياسي"));
 
-        arraylist.add(new TriviaQuestion("Michael Jackson is a distinguished person in the field of ?", "Pop Music", "Jounalism", "Sports", "Acting", "Pop Music"));
+        arraylist.add(new TriviaQuestion("مايكل جاكسون شخص مميز في مجال؟ "," موسيقى البوب "," الصحافة "," الرياضة "," التمثيل "," موسيقى البوب "));
 
         arraylist.add(new TriviaQuestion("The first Indian to swim across English channel was ?", "V. Merchant", "P. K. Banerji", "Mihir Sen", "Arati Saha", "Mihir Sen"));
 
@@ -82,28 +81,26 @@ public class TriviaQuizHelper extends SQLiteOpenHelper
 
         arraylist.add(new TriviaQuestion("Who is known as the ' Saint of the gutters ?", "B.R.Ambedkar", "Mother Teresa", "Mahatma Gandhi", "Baba Amte", "Mother Teresa"));
 
-        arraylist.add(new TriviaQuestion("Who invented the famous formula E=mc^2", "Albert Einstein", "Galilio", "Sarvesh", "Bill Gates", "Albert Einstein"));
+        arraylist.add(new TriviaQuestion("من اخترع القانون الشهير E=mc^2 ؟", "Albert Einstein", "Galilio", "Sarvesh", "Bill Gates", "Albert Einstein"));
 
-        arraylist.add(new TriviaQuestion("Who is elected as president of us 2016", "Donald Trump", "Hilary Clinton", "Jhon pol", "Barack Obama", "Donald Trump"));
+        arraylist.add(new TriviaQuestion("من ينتخب رئيسًا للولايات المتحدة 2016 ؟" , "دونالد ترامب" , "هيلاري كلينتون" , "جون بول" , "باراك أوباما", "دونالد ترامب"));
 
-        arraylist.add(new TriviaQuestion("Who was the founder of company Microsoft", "Bill Gates", "Bill Clinton", "Jhon rio", "Steve jobs", "Bill Gates"));
+        arraylist.add(new TriviaQuestion("من كان مؤسس شركة Microsoft ؟" , "بيل جيتس" , "بيل كلينتون" , "جون ريو" , "ستيف جوبز" , "بيل جيتس"));
 
-        arraylist.add(new TriviaQuestion("Who was the founder of company Apple ?", "Steve Jobs", "Steve Washinton", "Bill Gates", "Jobs Wills", "Steve Jobs"));
+        arraylist.add(new TriviaQuestion(" من هو مؤسس شركة Apple ؟", "Steve Jobs", "Steve Washinton", "Bill Gates", "Jobs Wills", "Steve Jobs"));
 
-        arraylist.add(new TriviaQuestion("Who was the founder of company Google ?", "Steve Jobs", "Bill Gates", "Larry Page", "Sundar Pichai", "Larry Page"));
+        arraylist.add(new TriviaQuestion("من هو مؤسس شركة Google ؟", "Steve Jobs", "Bill Gates", "Larry Page", "Sundar Pichai", "Larry Page"));
 
         arraylist.add(new TriviaQuestion("Who is know as god of cricket ?", "Sachin Tendulkar", "Kapil Dev", "Virat Koli", "Dhoni", "Sachin Tendulkar"));
 
-        arraylist.add(new TriviaQuestion("who has won ballon d'or of 2015 ?", "Lionel Messi", "Cristiano Ronaldo", "Neymar", "Kaka", "Lionel Messi"));
+        arraylist.add(new TriviaQuestion("من فاز بالون دور 2015؟" , "ليونيل ميسي" , "كريستيانو رونالدو" , "نيمار" , "كاكا" , "ليونيل ميسي"));
 
-        arraylist.add(new TriviaQuestion("who has won ballon d'or of 2014 ?", "Neymar", "Lionel Messi", "Cristiano Ronaldo", "Kaka", "Cristiano Ronaldo"));
+        arraylist.add(new TriviaQuestion("من فاز بالون دور 2014؟" , "نيمار" , "ليونيل ميسي" , "كريستيانو رونالدو" , "كاكا" , "كريستيانو رونالدو"));
 
-        arraylist.add(new TriviaQuestion("the Founder of the most famous gaming platform steam is ?", "Bill Cliton", "Bill Williams", "Gabe Newell", "Bill Gates", "Gabe Newell"));
+        arraylist.add(new TriviaQuestion("مؤسس الأكثر شهرة بخار منصة الألعاب هو؟" , "بيل كلينتون" , "بيل ويليامز" , "غابي نيويل" , "بيل جيتس" , "غابي نيويل"));
 
         this.addAllQuestions(arraylist);
-
     }
-
 
     private void addAllQuestions(ArrayList<TriviaQuestion> allQuestions) {
         SQLiteDatabase db = this.getWritableDatabase();

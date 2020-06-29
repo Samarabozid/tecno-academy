@@ -1,11 +1,15 @@
 package tecno.academy.TecnoAcademy.TeacherApp.Fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -41,6 +45,8 @@ public class MyPdfFragment extends Fragment
 
     List<PdfModel> t;
     teacherAdapter adapter;
+
+    String key;
 
     @Nullable
     @Override
@@ -78,7 +84,9 @@ public class MyPdfFragment extends Fragment
                 for (DataSnapshot snapshot : dataSnapshot.getChildren())
                 {
                     PdfModel teacherModel = snapshot.getValue(PdfModel.class);
+                    key = snapshot.getKey();
                     t.add(teacherModel);
+
                 }
 
                 adapter = new teacherAdapter(t);
@@ -121,6 +129,29 @@ public class MyPdfFragment extends Fragment
 
             holder.title.setText(name);
 
+            holder.delete.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    new AlertDialog.Builder(getContext())
+                            .setTitle("حذف الملف؟")
+                            .setMessage("هل أنت متأكد من الحذف؟")
+                            .setPositiveButton("نعم", new DialogInterface.OnClickListener()
+                            {
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    databaseReference.child("TeachersPdfs").child(getuId()).child(key).removeValue();
+
+                                    teacherModels.remove(position);
+                                    notifyItemRemoved(position);
+                                }
+                            })
+                            .setNegativeButton("لا", null)
+                            .show();
+                }
+            });
+
             holder.linearLayout.setOnClickListener(new View.OnClickListener()
             {
                 @Override
@@ -143,12 +174,14 @@ public class MyPdfFragment extends Fragment
         {
             TextView title;
             LinearLayout linearLayout;
+            ImageView delete;
 
             teacherVH(@NonNull View itemView)
             {
                 super(itemView);
                 title = itemView.findViewById(R.id.pdf_title);
                 linearLayout = itemView.findViewById(R.id.pdf_lin);
+                delete = itemView.findViewById(R.id.delete);
             }
         }
     }

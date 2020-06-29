@@ -20,7 +20,7 @@
 
   <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     >
 
@@ -29,109 +29,147 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:gravity="end|center_vertical"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
         >
-        <ImageView
-            android:id="@+id/skype_img"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/sky"
-            />
-        <ImageView
-            android:id="@+id/chat_img"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/chat"
-            />
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/skype_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sky"
+                android:layout_marginBottom="5dp"
+                />
+            <ImageView
+                android:id="@+id/chat_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/chat"
+                android:layout_marginTop="5dp"
+                />
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="end|center_vertical"
-            android:layout_marginLeft="20dp"
+            android:gravity="end"
             >
 
             <TextView
                 android:id="@+id/teacher_name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="name"
+                android:text="namejkfnfldrksfndlfksfnrdfkdngkngjkdgjsdrfgjkdfbgjjfbgjskdfbg"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
                 />
 
             <TextView
                 android:id="@+id/subject_name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="subject"
+                android:text="subjectklfnseklfnkksfnl"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:layout_marginTop="5dp"
                 />
 
         </LinearLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/user_profile"
-            android:layout_width="60dp"
-            android:layout_height="57dp"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/professor" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/professor" />
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
-    <com.balysv.materialripple.MaterialRippleLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/rippleWhite"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        >
-
-        <Button
-            android:id="@+id/see_gp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/login_btn_corners"
-            android:text="المجموعات"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
-            />
-
-    </com.balysv.materialripple.MaterialRippleLayout>
-
-      <com.balysv.materialripple.MaterialRippleLayout
+      <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          style="@style/rippleWhite"
+          android:orientation="horizontal"
           android:layout_marginTop="10dp"
-          android:layout_marginLeft="20dp"
-          android:layout_marginRight="20dp"
-          android:layout_marginBottom="10dp"
-          >
+          android:layout_marginBottom="10dp">
 
-          <Button
-              android:id="@+id/see_ex"
-              android:layout_width="match_parent"
+          <com.balysv.materialripple.MaterialRippleLayout
+              android:layout_width="0dp"
               android:layout_height="wrap_content"
-              android:background="@drawable/login_btn_corners"
-              android:text="الامتحانات"
-              android:layout_gravity="center"
-              android:textStyle="bold"
-              android:textSize="20sp"
-              android:textColor="@android:color/white"
-              />
+              android:layout_weight="1"
+              style="@style/rippleWhite"
+              android:layout_marginTop="20dp"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginBottom="20dp"
+              >
 
-      </com.balysv.materialripple.MaterialRippleLayout>
+              <Button
+                  android:id="@+id/see_gp"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:background="@drawable/login_btn_corners"
+                  android:text="المجموعات"
+                  android:layout_gravity="center"
+                  android:textStyle="bold"
+                  android:textSize="18sp"
+                  android:textColor="@android:color/white"
+                  />
+
+          </com.balysv.materialripple.MaterialRippleLayout>
+
+          <com.balysv.materialripple.MaterialRippleLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              style="@style/rippleWhite"
+              android:layout_marginTop="20dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="20dp"
+              android:layout_marginBottom="20dp"
+              >
+
+              <Button
+                  android:id="@+id/see_ex"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:background="@drawable/login_btn_corners"
+                  android:text="الامتحانات"
+                  android:layout_gravity="center"
+                  android:textStyle="bold"
+                  android:textSize="18sp"
+                  android:textColor="@android:color/white"
+                  />
+
+          </com.balysv.materialripple.MaterialRippleLayout>
+
+
+      </LinearLayout>
+
+
 
     <View
         android:layout_width="match_parent"

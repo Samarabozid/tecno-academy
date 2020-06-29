@@ -46,17 +46,16 @@ public class ChatActivity extends AppCompatActivity
     TeacherModel teacherModel;
     List<ChatModel> c;
 
-    chatAdapter adapter;
+    //chatAdapter adapter;
 
     StudentModel studentModel;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        teacherModel = (TeacherModel) getIntent().getSerializableExtra("kk");
+        /*teacherModel = (TeacherModel) getIntent().getSerializableExtra("kk");
 
         chat_msg_field = findViewById(R.id.chat_msg);
         floatingActionButton = findViewById(R.id.send_msg_fab);
@@ -175,7 +174,7 @@ public class ChatActivity extends AppCompatActivity
 
     private void sendMsg(String s)
     {
-        ChatModel chatModel = new ChatModel(s,getuId());
+        ChatModel chatModel = new ChatModel(s,getuId(),p);
 
         String k = databaseReference.child("StudentsChat").child(getuId()).child(teacherModel.getTeacher_id()).push().getKey();
         databaseReference.child("StudentsChat").child(getuId()).child(teacherModel.getTeacher_id()).child(k).setValue(chatModel);
@@ -211,5 +210,7 @@ public class ChatActivity extends AppCompatActivity
     String getuId()
     {
         return FirebaseAuth.getInstance().getUid();
+    }*/
+
     }
 }

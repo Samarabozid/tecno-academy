@@ -4,7 +4,6 @@ import android.app.Activity;
 
 public class TriviaQuestion extends Activity
 {
-
     private int id;
     private String question;
     private String opta;
@@ -14,7 +13,6 @@ public class TriviaQuestion extends Activity
     private String answer;
 
     public TriviaQuestion(String q, String oa, String ob, String oc, String od, String ans) {
-
         question = q;
         opta = oa;
         optb = ob;

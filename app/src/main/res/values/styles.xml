@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fontFamily">@font/kanyamakan</item>
+        <item name="android:fontFamily">@font/mondai</item>
     </style>
 
 
@@ -32,7 +32,5 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
-
-
 
 </resources>

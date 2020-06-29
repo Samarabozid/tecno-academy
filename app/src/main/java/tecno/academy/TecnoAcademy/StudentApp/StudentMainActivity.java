@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,9 +39,12 @@ public class StudentMainActivity extends AppCompatActivity
     FragmentPagerAdapter fragmentPagerAdapter;
 
     CircleImageView circleImageView;
+    TextView student_name,student_level;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+
+    String name,level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -54,6 +58,8 @@ public class StudentMainActivity extends AppCompatActivity
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewpager);
         circleImageView = findViewById(R.id.img);
+        student_name  = findViewById(R.id.student_name);
+        student_level = findViewById(R.id.level);
 
         circleImageView.setOnClickListener(new View.OnClickListener()
         {
@@ -96,6 +102,12 @@ public class StudentMainActivity extends AppCompatActivity
                         .error(R.drawable.addphoto)
                         .placeholder(R.drawable.addphoto)
                         .into(circleImageView);
+
+                name = studentModel.getName();
+                level = studentModel.getLevel();
+
+                student_name.setText(name);
+                student_level.setText(level);
             }
 
             @Override

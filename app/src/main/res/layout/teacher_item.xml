@@ -11,37 +11,37 @@
     >
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="end|center_vertical"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="end"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/teacher_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="name"
+            android:inputType="textMultiLine"
+            android:text="namefjkfknsdlfsdkflsdnofgawrjfirjgivnerufgeisfhnierfnerifnherifhnherifgnerfneroinf"
             android:textColor="@android:color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/subject_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
             android:layout_marginTop="5dp"
-            android:text="subject"
-            />
+            android:inputType="textMultiLine"
+            android:text="subjectsjdfnsladifnsefklan"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_profile"
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:src="@drawable/professor"
         android:layout_marginLeft="20dp"
         />

@@ -40,8 +40,6 @@ public class MainGameActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game);
-
-
         //Initializing variables
         questionText =  findViewById(R.id.triviaQuestion);
         buttonA =  findViewById(R.id.buttonA);
@@ -51,20 +49,6 @@ public class MainGameActivity extends AppCompatActivity
         triviaQuizText =  findViewById(R.id.triviaQuizText);
         timeText =  findViewById(R.id.timeText);
         resultText = findViewById(R.id.resultText);
-
-        //Setting typefaces for textview and buttons - this will give stylish fonts on textview and button etc
-//        tb = Typeface.createFromAsset(getAssets(), "fonts/TitilliumWeb-Bold.ttf");
-  //      sb = Typeface.createFromAsset(getAssets(), "fonts/shablagooital.ttf");
-    //    triviaQuizText.setTypeface(sb);
-      //  questionText.setTypeface(tb);
-        //buttonA.setTypeface(tb);
-        //buttonB.setTypeface(tb);
-        //buttonC.setTypeface(tb);
-        //buttonD.setTypeface(tb);
-        //timeText.setTypeface(tb);
-        //resultText.setTypeface(sb);
-        //coinText.setTypeface(tb);
-
         //Our database helper class
         triviaQuizHelper = new TriviaQuizHelper(this);
         //Make db writable

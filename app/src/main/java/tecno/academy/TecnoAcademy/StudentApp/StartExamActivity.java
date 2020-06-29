@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -32,11 +33,7 @@ import tecno.academy.TecnoAcademy.R;
 
 public class StartExamActivity extends AppCompatActivity
 {
-    ImageView imageView1,imageView2,imageView3
-            ,imageView4,imageView5,imageView6
-            ,imageView7,imageView8,imageView9
-            ,imageView10;
-
+    ImageView img1,img2,img3,img4,img5,img6,img7,img8,img9,img10;
     FirebaseStorage firebaseStorage;
     StorageReference storageReference;
     FirebaseDatabase firebaseDatabase;
@@ -83,6 +80,7 @@ public class StartExamActivity extends AppCompatActivity
 
     Button done;
     CheckBox check;
+    boolean isImageFitToScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -90,22 +88,22 @@ public class StartExamActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_exam);
 
-        imageView1 = findViewById(R.id.image1);
-        imageView2 = findViewById(R.id.image2);
-        imageView3 = findViewById(R.id.image3);
-        imageView4 = findViewById(R.id.image4);
-        imageView5 = findViewById(R.id.image5);
-        imageView6 = findViewById(R.id.image6);
-        imageView7 = findViewById(R.id.image7);
-        imageView8 = findViewById(R.id.image8);
-        imageView9 = findViewById(R.id.image9);
-        imageView10 = findViewById(R.id.image10);
-
         firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference().child("images");
 
         done = findViewById(R.id.done);
         check = findViewById(R.id.checkbox);
+
+        img1 = findViewById(R.id.img1);
+        img2 = findViewById(R.id.img2);
+        img3 = findViewById(R.id.img3);
+        img4 = findViewById(R.id.img4);
+        img5 = findViewById(R.id.img5);
+        img6 = findViewById(R.id.img6);
+        img7 = findViewById(R.id.img7);
+        img8 = findViewById(R.id.img8);
+        img9 = findViewById(R.id.img9);
+        img10 = findViewById(R.id.img10);
 
         correctAnswer1 = findViewById(R.id.correct1);
         correctAnswer2 = findViewById(R.id.correct2);
@@ -200,227 +198,383 @@ public class StartExamActivity extends AppCompatActivity
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
 
-        databaseReference.child("Exams").child(teacher_id).child(k).addValueEventListener(new ValueEventListener() {
-
+        img1.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            public void onClick(View v)
             {
+                if(isImageFitToScreen)
+                {
+                    isImageFitToScreen=false;
+                    img1.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img1.setAdjustViewBounds(true);
+                }else
+                {
+                    isImageFitToScreen=true;
+                    img1.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img1.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                }
+            }
+        });
+
+        img2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img2.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img2.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img2.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img2.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        img3.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img3.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img3.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img3.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img3.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        img4.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img4.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img4.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img4.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img4.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        img5.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img5.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img5.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img5.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img5.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        img6.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img6.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img6.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img6.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img6.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        img7.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img7.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img7.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img7.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img7.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        img8.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img8.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img8.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img8.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img8.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        img9.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img9.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img9.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img9.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img9.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        img10.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img10.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img10.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img10.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img10.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+            }
+        });
+
+        databaseReference.child("Exams").child(teacher_id).child(k).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 QuestionModel questionModel = dataSnapshot.getValue(QuestionModel.class);
 
-                Picasso.get()
-                        .load(questionModel.getImg1())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView1);
-
-                Picasso.get()
-                        .load(questionModel.getImg2())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView2);
-
-                Picasso.get()
-                        .load(questionModel.getImg3())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView3);
-
-                Picasso.get()
-                        .load(questionModel.getImg4())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView4);
-
-                Picasso.get()
-                        .load(questionModel.getImg5())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView5);
-
-                Picasso.get()
-                        .load(questionModel.getImg6())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView6);
-
-                Picasso.get()
-                        .load(questionModel.getImg7())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView7);
-
-                Picasso.get()
-                        .load(questionModel.getImg8())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView8);
-
-                Picasso.get()
-                        .load(questionModel.getImg9())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView9);
-
-                Picasso.get()
-                        .load(questionModel.getImg10())
-                        .error(R.drawable.addphoto)
-                        .placeholder(R.drawable.addphoto)
-                        .into(imageView10);
-
-                title=questionModel.getEx_title();
-                q1 = questionModel.getQues1();
-                q2 = questionModel.getQues2();
-                q3 = questionModel.getQues3();
-                q4 = questionModel.getQues4();
-                q5 = questionModel.getQues5();
-                q6 = questionModel.getQues1();
-                q7 = questionModel.getQues2();
-                q8 = questionModel.getQues3();
-                q9 = questionModel.getQues4();
-                q10 = questionModel.getQues5();
-
-                c1 = questionModel.getCorrectAnswer1();
-                correctAnswer1.setText(c1);
-                c2 = questionModel.getCorrectAnswer2();
-                correctAnswer2.setText(c2);
-                c3 = questionModel.getCorrectAnswer3();
-                correctAnswer3.setText(c3);
-                c4 = questionModel.getCorrectAnswer4();
-                correctAnswer4.setText(c4);
-                c5 = questionModel.getCorrectAnswer5();
-                correctAnswer5.setText(c5);
-                c6 = questionModel.getCorrectAnswer6();
-                correctAnswer6.setText(c6);
-                c7 = questionModel.getCorrectAnswer7();
-                correctAnswer7.setText(c7);
-                c8 = questionModel.getCorrectAnswer8();
-                correctAnswer8.setText(c8);
-                c9 = questionModel.getCorrectAnswer9();
-                correctAnswer9.setText(c9);
-                c10 = questionModel.getCorrectAnswer10();
-                correctAnswer10.setText(c10);
-
-                optA1 = questionModel.getOpt11();
-                optB1 = questionModel.getOpt12();
-                optC1 = questionModel.getOpt13();
-                optD1 = questionModel.getOpt14();
-
-                optA2 = questionModel.getOpt21();
-                optB2 = questionModel.getOpt22();
-                optC2 = questionModel.getOpt23();
-                optD2 = questionModel.getOpt24();
-
-                optA3 = questionModel.getOpt33();
-                optB3 = questionModel.getOpt32();
-                optC3 = questionModel.getOpt33();
-                optD3 = questionModel.getOpt34();
-
-                optA4 = questionModel.getOpt41();
-                optB4 = questionModel.getOpt42();
-                optC4 = questionModel.getOpt43();
-                optD4 = questionModel.getOpt44();
-
-                optA5 = questionModel.getOpt51();
-                optB5 = questionModel.getOpt52();
-                optC5 = questionModel.getOpt53();
-                optD5 = questionModel.getOpt54();
-
-                optA6 = questionModel.getOpt61();
-                optB6 = questionModel.getOpt62();
-                optC6 = questionModel.getOpt63();
-                optD6 = questionModel.getOpt64();
-
-                optA7 = questionModel.getOpt71();
-                optB7 = questionModel.getOpt72();
-                optC7 = questionModel.getOpt73();
-                optD7 = questionModel.getOpt74();
-
-                optA8 = questionModel.getOpt81();
-                optB8 = questionModel.getOpt82();
-                optC8 = questionModel.getOpt83();
-                optD8 = questionModel.getOpt84();
-
-                optA9 = questionModel.getOpt91();
-                optB9 = questionModel.getOpt92();
-                optC9 = questionModel.getOpt93();
-                optD9 = questionModel.getOpt94();
-
-                optA10 = questionModel.getOpt101();
-                optB10 = questionModel.getOpt102();
-                optC10 = questionModel.getOpt103();
-                optD10 = questionModel.getOpt104();
-
+                title = questionModel.getEx_title();
                 quiz_title.setText(title);
-                question1.setText(q1);
-                question2.setText(q2);
-                question3.setText(q3);
-                question4.setText(q4);
-                question5.setText(q5);
-                question6.setText(q6);
-                question7.setText(q7);
-                question8.setText(q8);
-                question9.setText(q9);
-                question10.setText(q10);
 
+                Picasso.get()
+                        .load(questionModel.getImageurl1())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img1);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl2())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img2);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl3())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img3);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl4())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img4);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl5())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img5);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl6())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img6);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl7())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img7);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl8())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img8);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl9())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img9);
+
+                Picasso.get()
+                        .load(questionModel.getImageurl10())
+                        .error(R.drawable.addphoto)
+                        .placeholder(R.drawable.addphoto)
+                        .into(img10);
+
+                q1 = questionModel.getQuestion1();
+                question1.setText(q1);
+                c1 = questionModel.getCorrect_answer1();
+                correctAnswer1.setText(c1);
+                optA1 = questionModel.getOptionA1();
+                optB1 = questionModel.getOptionB1();
+                optC1 = questionModel.getOptionC1();
+                optD1 = questionModel.getOptionD1();
                 ansA1.setText(optA1);
                 ansB1.setText(optB1);
                 ansC1.setText(optC1);
                 ansD1.setText(optD1);
 
+                q2 = questionModel.getQuestion2();
+                question2.setText(q2);
+                c2 = questionModel.getCorrect_answer2();
+                correctAnswer2.setText(c2);
+                optA2 = questionModel.getOptionA2();
+                optB2 = questionModel.getOptionB2();
+                optC2 = questionModel.getOptionC2();
+                optD2 = questionModel.getOptionD2();
                 ansA2.setText(optA2);
                 ansB2.setText(optB2);
                 ansC2.setText(optC2);
                 ansD2.setText(optD2);
 
+                q3 = questionModel.getQuestion3();
+                question3.setText(q3);
+                c3 = questionModel.getCorrect_answer3();
+                correctAnswer3.setText(c3);
+                optA3 = questionModel.getOptionA3();
+                optB3 = questionModel.getOptionB3();
+                optC3 = questionModel.getOptionC3();
+                optD3 = questionModel.getOptionD3();
                 ansA3.setText(optA3);
                 ansB3.setText(optB3);
                 ansC3.setText(optC3);
                 ansD3.setText(optD3);
 
+                q4 = questionModel.getQuestion4();
+                question4.setText(q4);
+                c4 = questionModel.getCorrect_answer4();
+                correctAnswer4.setText(c4);
+                optA4 = questionModel.getOptionA4();
+                optB4 = questionModel.getOptionB4();
+                optC4 = questionModel.getOptionC4();
+                optD4 = questionModel.getOptionD4();
                 ansA4.setText(optA4);
                 ansB4.setText(optB4);
                 ansC4.setText(optC4);
                 ansD4.setText(optD4);
 
+                q5 = questionModel.getQuestion5();
+                question5.setText(q5);
+                c5 = questionModel.getCorrect_answer5();
+                correctAnswer5.setText(c5);
+                optA5 = questionModel.getOptionA5();
+                optB5 = questionModel.getOptionB5();
+                optC5 = questionModel.getOptionC5();
+                optD5 = questionModel.getOptionD5();
                 ansA5.setText(optA5);
                 ansB5.setText(optB5);
                 ansC5.setText(optC5);
                 ansD5.setText(optD5);
 
+                q6 = questionModel.getQuestion6();
+                question6.setText(q6);
+                c6 = questionModel.getCorrect_answer6();
+                correctAnswer6.setText(c6);
+                optA6 = questionModel.getOptionA6();
+                optB6 = questionModel.getOptionB6();
+                optC6 = questionModel.getOptionC6();
+                optD6 = questionModel.getOptionD6();
                 ansA6.setText(optA6);
                 ansB6.setText(optB6);
                 ansC6.setText(optC6);
                 ansD6.setText(optD6);
 
+                q7 = questionModel.getQuestion7();
+                question7.setText(q7);
+                c7 = questionModel.getCorrect_answer7();
+                correctAnswer7.setText(c7);
+                optA7 = questionModel.getOptionA7();
+                optB7 = questionModel.getOptionB7();
+                optC7 = questionModel.getOptionC7();
+                optD7 = questionModel.getOptionD7();
                 ansA7.setText(optA7);
                 ansB7.setText(optB7);
                 ansC7.setText(optC7);
                 ansD7.setText(optD7);
 
+                q8 = questionModel.getQuestion8();
+                question8.setText(q8);
+                c8 = questionModel.getCorrect_answer8();
+                correctAnswer8.setText(c8);
+                optA8 = questionModel.getOptionA8();
+                optB8 = questionModel.getOptionB8();
+                optC8 = questionModel.getOptionC8();
+                optD8 = questionModel.getOptionD8();
                 ansA8.setText(optA8);
                 ansB8.setText(optB8);
                 ansC8.setText(optC8);
                 ansD8.setText(optD8);
 
+                q9 = questionModel.getQuestion9();
+                question9.setText(q9);
+                c9 = questionModel.getCorrect_answer9();
+                correctAnswer9.setText(c9);
+                optA9 = questionModel.getOptionA9();
+                optB9 = questionModel.getOptionB9();
+                optC9 = questionModel.getOptionC9();
+                optD9 = questionModel.getOptionD9();
                 ansA9.setText(optA9);
                 ansB9.setText(optB9);
                 ansC9.setText(optC9);
                 ansD9.setText(optD9);
 
+                q10 = questionModel.getQuestion10();
+                question10.setText(q10);
+                c10 = questionModel.getCorrect_answer10();
+                correctAnswer10.setText(c10);
+                optA10 = questionModel.getOptionA10();
+                optB10 = questionModel.getOptionB10();
+                optC10 = questionModel.getOptionC10();
+                optD10 = questionModel.getOptionD10();
                 ansA10.setText(optA10);
                 ansB10.setText(optB10);
                 ansC10.setText(optC10);
                 ansD10.setText(optD10);
-
-                //score.setText(String.format("%d", quizScore));
-
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError)
-            {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
             }
         });
+
+
 
         onRadioButtonClicked();
 
@@ -467,7 +621,7 @@ public class StartExamActivity extends AppCompatActivity
                             }
                         } else
                         {
-                            quizScore = 0;
+                            score.setText(String.format("%d", quizScore));
                         }
                         break;
 

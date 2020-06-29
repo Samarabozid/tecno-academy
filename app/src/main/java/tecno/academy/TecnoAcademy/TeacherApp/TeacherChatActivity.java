@@ -1,10 +1,14 @@
 package tecno.academy.TecnoAcademy.TeacherApp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -12,10 +16,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -23,6 +34,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,16 +49,20 @@ import tecno.academy.TecnoAcademy.R;
 public class TeacherChatActivity extends AppCompatActivity
 {
     EditText chat_msg_field;
-    FloatingActionButton floatingActionButton;
+    FloatingActionButton send_msg;
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    FirebaseStorage firebaseStorage;
+    StorageReference storageReference;
     TeacherModel teacherModel;
     StudentModel studentModel;
     List<ChatModel> c;
+    Uri photoPath;
+    private static final int RC_PHOTO_PICKER = 2;
 
     chatAdapter adapter;
 
@@ -54,10 +72,13 @@ public class TeacherChatActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_chat);
 
+        firebaseStorage = FirebaseStorage.getInstance();
+        storageReference = firebaseStorage.getReference().child("images");
+
         studentModel = (StudentModel) getIntent().getSerializableExtra("yy");
 
         chat_msg_field = findViewById(R.id.chat_msg);
-        floatingActionButton = findViewById(R.id.send_msg_fab);
+        send_msg = findViewById(R.id.send_msg_fab);
         recyclerView = findViewById(R.id.recyclerview);
 
         c = new ArrayList<>();
@@ -68,7 +89,7 @@ public class TeacherChatActivity extends AppCompatActivity
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
 
-        floatingActionButton.setOnClickListener(new View.OnClickListener()
+        send_msg.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -134,9 +155,10 @@ public class TeacherChatActivity extends AppCompatActivity
         {
             ChatModel chatModel = chatModels.get(position);
 
-            String s = chatModel.getMsg();
+            holder.chat_txt.setVisibility(View.GONE);
+            holder.chat_txt.setVisibility(View.VISIBLE);
 
-            holder.chat_txt.setText(s);
+            holder.chat_txt.setText(chatModel.getMsg());
 
             if (chatModel.getUid().equals(getuId()))
             {
@@ -183,8 +205,43 @@ public class TeacherChatActivity extends AppCompatActivity
 
         databaseReference.child("StudentsChatDetails").child(getuId()).child(studentModel.getStudent_id()).setValue(studentModel);
 
-
         chat_msg_field.setText("");
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+         if (requestCode == RC_PHOTO_PICKER && resultCode == RESULT_OK)
+         {
+             photoPath = data.getData();
+
+             final StorageReference photoRef = storageReference.child("images/" + photoPath.getLastPathSegment());
+
+             //upload photo to firebase storage
+             photoRef.putFile(photoPath).addOnSuccessListener
+                     (this, new OnSuccessListener<UploadTask.TaskSnapshot>()
+                             {
+                                 @Override
+                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
+                                 {
+                                     Task<Uri> photoUrl = taskSnapshot.getStorage().getDownloadUrl();
+                                     ChatModel chatModel = new ChatModel(null, getuId());
+                                     //databaseReference.push().setValue(chatModel);
+                                     String k = databaseReference.child("TeachersChat").child(getuId()).child(studentModel.getStudent_id()).push().getKey();
+                                     databaseReference.child("TeachersChat").child(getuId()).child(studentModel.getStudent_id()).child(k).setValue(chatModel);
+                                     databaseReference.child("StudentsChat").child(studentModel.getStudent_id()).child(getuId()).child(k).setValue(chatModel);
+
+                                     databaseReference.child("TeachersChatDetails").child(studentModel.getStudent_id()).child(getuId()).setValue(teacherModel);
+                                     databaseReference.child("TeachersChatDetails").child(getuId()).child(studentModel.getStudent_id()).setValue(teacherModel);
+
+                                     databaseReference.child("StudentsChatDetails").child(getuId()).child(studentModel.getStudent_id()).setValue(studentModel);
+
+                                     chat_msg_field.setText("");
+                                 }
+                             }
+                     );
+        }
     }
 
     void getData()

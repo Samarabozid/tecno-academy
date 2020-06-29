@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ import java.util.List;
 import tecno.academy.TecnoAcademy.Models.QuestionModel;
 import tecno.academy.TecnoAcademy.R;
 import tecno.academy.TecnoAcademy.StudentApp.StartExamActivity;
+import tecno.academy.TecnoAcademy.TeacherApp.TeacherExams.ViewExamActivity;
 
 public class MyExamFragment extends Fragment
 {
@@ -44,8 +46,9 @@ public class MyExamFragment extends Fragment
     DatabaseReference databaseReference;
     List<QuestionModel> ee;
 
-   examAdapter adapter;
-   String s;
+    examAdapter adapter;
+
+    ArrayList<String> keys;
 
     @Nullable
     @Override
@@ -72,8 +75,9 @@ public class MyExamFragment extends Fragment
         databaseReference = firebaseDatabase.getReference();
 
         ee = new ArrayList<>();
+        keys  =  new ArrayList<>();
 
-        databaseReference.child("Exams").child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener()
+        databaseReference.child("Exams").child(getuId()).addValueEventListener(new ValueEventListener()
         {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
@@ -84,7 +88,8 @@ public class MyExamFragment extends Fragment
                 {
                     QuestionModel questionModel = snapshot.getValue(QuestionModel.class);
                     ee.add(questionModel);
-                    s = snapshot.getKey();
+                    String examKey = snapshot.getKey();
+                    keys.add(examKey);
                 }
 
                 adapter = new examAdapter(ee);
@@ -121,12 +126,11 @@ public class MyExamFragment extends Fragment
         public void onBindViewHolder(@NonNull examAdapter.examVH holder, final int position)
         {
             final QuestionModel questionModel = questionModels.get(position);
-            String name = questionModel.getEx_title();
-            //final String img = examModel.getExam_image();
 
+            String name = questionModel.getEx_title();
             holder.title.setText(name);
 
-            holder.linearLayout.setOnClickListener(new View.OnClickListener()
+            holder.delete.setOnClickListener(new View.OnClickListener()
             {
                 @Override
                 public void onClick(View view)
@@ -138,7 +142,7 @@ public class MyExamFragment extends Fragment
                             {
                                 public void onClick(DialogInterface dialog, int which)
                                 {
-                                    databaseReference.child("Exams").child(FirebaseAuth.getInstance().getUid()).child(s).removeValue();
+                                    databaseReference.child("Exams").child(getuId()).child(keys.get(position)).removeValue();
 
                                     questionModels.remove(position);
                                     notifyItemRemoved(position);
@@ -148,7 +152,19 @@ public class MyExamFragment extends Fragment
                             .show();
                 }
             });
+
+            holder.linearLayout.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    Intent intent = new Intent(getContext(), ViewExamActivity.class);
+                    intent.putExtra("ex",keys.get(position));
+                    startActivity(intent);
+                }
+            });
         }
+
         @Override
         public int getItemCount() {
             return questionModels.size();
@@ -158,6 +174,7 @@ public class MyExamFragment extends Fragment
         {
             TextView title;
             LinearLayout linearLayout;
+            ImageView delete;
 
             examVH(@NonNull View itemView)
             {
@@ -165,6 +182,7 @@ public class MyExamFragment extends Fragment
 
                 title = itemView.findViewById(R.id.exam_title);
                 linearLayout = itemView.findViewById(R.id.exam_lin);
+                delete = itemView.findViewById(R.id.delete);
 
             }
         }

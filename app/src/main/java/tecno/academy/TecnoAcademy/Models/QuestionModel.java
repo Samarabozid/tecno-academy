@@ -2,21 +2,21 @@ package tecno.academy.TecnoAcademy.Models;
 
 import java.io.Serializable;
 
-public class QuestionModel implements Serializable
-{
+public class QuestionModel implements Serializable {
 
     int score;
-    String ex_title;
-    String ques1, opt11, opt12, opt13, opt14, correctAnswer1,img1;
-    String ques2, opt21, opt22, opt23, opt24, correctAnswer2,img2;
-    String ques3, opt31, opt32, opt33, opt34, correctAnswer3,img3;
-    String ques4, opt41, opt42, opt43, opt44, correctAnswer4,img4;
-    String ques5, opt51, opt52, opt53, opt54, correctAnswer5,img5;
-    String ques6, opt61, opt62, opt63, opt64, correctAnswer6,img6;
-    String ques7, opt71, opt72, opt73, opt74, correctAnswer7,img7;
-    String ques8, opt81, opt82, opt83, opt84, correctAnswer8,img8;
-    String ques9, opt91, opt92, opt93, opt94, correctAnswer9,img9;
-    String ques10, opt101, opt102, opt103, opt104, correctAnswer10,img10;
+    String id, ex_title;
+
+    String question1, optionA1, optionB1, optionC1, optionD1, correct_answer1, imageurl1;
+    String question2, optionA2, optionB2, optionC2, optionD2, correct_answer2, imageurl2;
+    String question3, optionA3, optionB3, optionC3, optionD3, correct_answer3, imageurl3;
+    String question4, optionA4, optionB4, optionC4, optionD4, correct_answer4, imageurl4;
+    String question5, optionA5, optionB5, optionC5, optionD5, correct_answer5, imageurl5;
+    String question6, optionA6, optionB6, optionC6, optionD6, correct_answer6, imageurl6;
+    String question7, optionA7, optionB7, optionC7, optionD7, correct_answer7, imageurl7;
+    String question8, optionA8, optionB8, optionC8, optionD8, correct_answer8, imageurl8;
+    String question9, optionA9, optionB9, optionC9, optionD9, correct_answer9, imageurl9;
+    String question10, optionA10, optionB10, optionC10, optionD10, correct_answer10, imageurl10;
 
     public QuestionModel() {
     }
@@ -26,79 +26,155 @@ public class QuestionModel implements Serializable
         this.ex_title = ex_title;
     }
 
-    public QuestionModel(int score, String ex_title, String ques1, String opt11, String opt12, String opt13, String opt14, String correctAnswer1, String img1, String ques2, String opt21, String opt22, String opt23, String opt24, String correctAnswer2, String img2, String ques3, String opt31, String opt32, String opt33, String opt34, String correctAnswer3, String img3, String ques4, String opt41, String opt42, String opt43, String opt44, String correctAnswer4, String img4, String ques5, String opt51, String opt52, String opt53, String opt54, String correctAnswer5, String img5, String ques6, String opt61, String opt62, String opt63, String opt64, String correctAnswer6, String img6, String ques7, String opt71, String opt72, String opt73, String opt74, String correctAnswer7, String img7, String ques8, String opt81, String opt82, String opt83, String opt84, String correctAnswer8, String img8, String ques9, String opt91, String opt92, String opt93, String opt94, String correctAnswer9, String img9, String ques10, String opt101, String opt102, String opt103, String opt104, String correctAnswer10, String img10) {
-        this.score = score;
+    public QuestionModel(String id, String ex_title, String question1, String optionA1, String optionB1, String optionC1, String optionD1, String correct_answer1, String imageurl1, String question2, String optionA2, String optionB2, String optionC2, String optionD2, String correct_answer2, String imageurl2, String question3, String optionA3, String optionB3, String optionC3, String optionD3, String correct_answer3, String imageurl3, String question4, String optionA4, String optionB4, String optionC4, String optionD4, String correct_answer4, String imageurl4, String question5, String optionA5, String optionB5, String optionC5, String optionD5, String correct_answer5, String imageurl5, String question6, String optionA6, String optionB6, String optionC6, String optionD6, String correct_answer6, String imageurl6, String question7, String optionA7, String optionB7, String optionC7, String optionD7, String correct_answer7, String imageurl7, String question8, String optionA8, String optionB8, String optionC8, String optionD8, String correct_answer8, String imageurl8, String question9, String optionA9, String optionB9, String optionC9, String optionD9, String correct_answer9, String imageurl9, String question10, String optionA10, String optionB10, String optionC10, String optionD10, String correct_answer10, String imageurl10) {
+        this.id = id;
         this.ex_title = ex_title;
-        this.ques1 = ques1;
-        this.opt11 = opt11;
-        this.opt12 = opt12;
-        this.opt13 = opt13;
-        this.opt14 = opt14;
-        this.correctAnswer1 = correctAnswer1;
-        this.img1 = img1;
-        this.ques2 = ques2;
-        this.opt21 = opt21;
-        this.opt22 = opt22;
-        this.opt23 = opt23;
-        this.opt24 = opt24;
-        this.correctAnswer2 = correctAnswer2;
-        this.img2 = img2;
-        this.ques3 = ques3;
-        this.opt31 = opt31;
-        this.opt32 = opt32;
-        this.opt33 = opt33;
-        this.opt34 = opt34;
-        this.correctAnswer3 = correctAnswer3;
-        this.img3 = img3;
-        this.ques4 = ques4;
-        this.opt41 = opt41;
-        this.opt42 = opt42;
-        this.opt43 = opt43;
-        this.opt44 = opt44;
-        this.correctAnswer4 = correctAnswer4;
-        this.img4 = img4;
-        this.ques5 = ques5;
-        this.opt51 = opt51;
-        this.opt52 = opt52;
-        this.opt53 = opt53;
-        this.opt54 = opt54;
-        this.correctAnswer5 = correctAnswer5;
-        this.img5 = img5;
-        this.ques6 = ques6;
-        this.opt61 = opt61;
-        this.opt62 = opt62;
-        this.opt63 = opt63;
-        this.opt64 = opt64;
-        this.correctAnswer6 = correctAnswer6;
-        this.img6 = img6;
-        this.ques7 = ques7;
-        this.opt71 = opt71;
-        this.opt72 = opt72;
-        this.opt73 = opt73;
-        this.opt74 = opt74;
-        this.correctAnswer7 = correctAnswer7;
-        this.img7 = img7;
-        this.ques8 = ques8;
-        this.opt81 = opt81;
-        this.opt82 = opt82;
-        this.opt83 = opt83;
-        this.opt84 = opt84;
-        this.correctAnswer8 = correctAnswer8;
-        this.img8 = img8;
-        this.ques9 = ques9;
-        this.opt91 = opt91;
-        this.opt92 = opt92;
-        this.opt93 = opt93;
-        this.opt94 = opt94;
-        this.correctAnswer9 = correctAnswer9;
-        this.img9 = img9;
-        this.ques10 = ques10;
-        this.opt101 = opt101;
-        this.opt102 = opt102;
-        this.opt103 = opt103;
-        this.opt104 = opt104;
-        this.correctAnswer10 = correctAnswer10;
-        this.img10 = img10;
+        this.question1 = question1;
+        this.optionA1 = optionA1;
+        this.optionB1 = optionB1;
+        this.optionC1 = optionC1;
+        this.optionD1 = optionD1;
+        this.correct_answer1 = correct_answer1;
+        this.imageurl1 = imageurl1;
+        this.question2 = question2;
+        this.optionA2 = optionA2;
+        this.optionB2 = optionB2;
+        this.optionC2 = optionC2;
+        this.optionD2 = optionD2;
+        this.correct_answer2 = correct_answer2;
+        this.imageurl2 = imageurl2;
+        this.question3 = question3;
+        this.optionA3 = optionA3;
+        this.optionB3 = optionB3;
+        this.optionC3 = optionC3;
+        this.optionD3 = optionD3;
+        this.correct_answer3 = correct_answer3;
+        this.imageurl3 = imageurl3;
+        this.question4 = question4;
+        this.optionA4 = optionA4;
+        this.optionB4 = optionB4;
+        this.optionC4 = optionC4;
+        this.optionD4 = optionD4;
+        this.correct_answer4 = correct_answer4;
+        this.imageurl4 = imageurl4;
+        this.question5 = question5;
+        this.optionA5 = optionA5;
+        this.optionB5 = optionB5;
+        this.optionC5 = optionC5;
+        this.optionD5 = optionD5;
+        this.correct_answer5 = correct_answer5;
+        this.imageurl5 = imageurl5;
+        this.question6 = question6;
+        this.optionA6 = optionA6;
+        this.optionB6 = optionB6;
+        this.optionC6 = optionC6;
+        this.optionD6 = optionD6;
+        this.correct_answer6 = correct_answer6;
+        this.imageurl6 = imageurl6;
+        this.question7 = question7;
+        this.optionA7 = optionA7;
+        this.optionB7 = optionB7;
+        this.optionC7 = optionC7;
+        this.optionD7 = optionD7;
+        this.correct_answer7 = correct_answer7;
+        this.imageurl7 = imageurl7;
+        this.question8 = question8;
+        this.optionA8 = optionA8;
+        this.optionB8 = optionB8;
+        this.optionC8 = optionC8;
+        this.optionD8 = optionD8;
+        this.correct_answer8 = correct_answer8;
+        this.imageurl8 = imageurl8;
+        this.question9 = question9;
+        this.optionA9 = optionA9;
+        this.optionB9 = optionB9;
+        this.optionC9 = optionC9;
+        this.optionD9 = optionD9;
+        this.correct_answer9 = correct_answer9;
+        this.imageurl9 = imageurl9;
+        this.question10 = question10;
+        this.optionA10 = optionA10;
+        this.optionB10 = optionB10;
+        this.optionC10 = optionC10;
+        this.optionD10 = optionD10;
+        this.correct_answer10 = correct_answer10;
+        this.imageurl10 = imageurl10;
+    }
+
+    public QuestionModel(int score, String id, String ex_title, String question1, String optionA1, String optionB1, String optionC1, String optionD1, String correct_answer1, String imageurl1, String question2, String optionA2, String optionB2, String optionC2, String optionD2, String correct_answer2, String imageurl2, String question3, String optionA3, String optionB3, String optionC3, String optionD3, String correct_answer3, String imageurl3, String question4, String optionA4, String optionB4, String optionC4, String optionD4, String correct_answer4, String imageurl4, String question5, String optionA5, String optionB5, String optionC5, String optionD5, String correct_answer5, String imageurl5, String question6, String optionA6, String optionB6, String optionC6, String optionD6, String correct_answer6, String imageurl6, String question7, String optionA7, String optionB7, String optionC7, String optionD7, String correct_answer7, String imageurl7, String question8, String optionA8, String optionB8, String optionC8, String optionD8, String correct_answer8, String imageurl8, String question9, String optionA9, String optionB9, String optionC9, String optionD9, String correct_answer9, String imageurl9, String question10, String optionA10, String optionB10, String optionC10, String optionD10, String correct_answer10, String imageurl10) {
+        this.score = score;
+        this.id = id;
+        this.ex_title = ex_title;
+        this.question1 = question1;
+        this.optionA1 = optionA1;
+        this.optionB1 = optionB1;
+        this.optionC1 = optionC1;
+        this.optionD1 = optionD1;
+        this.correct_answer1 = correct_answer1;
+        this.imageurl1 = imageurl1;
+        this.question2 = question2;
+        this.optionA2 = optionA2;
+        this.optionB2 = optionB2;
+        this.optionC2 = optionC2;
+        this.optionD2 = optionD2;
+        this.correct_answer2 = correct_answer2;
+        this.imageurl2 = imageurl2;
+        this.question3 = question3;
+        this.optionA3 = optionA3;
+        this.optionB3 = optionB3;
+        this.optionC3 = optionC3;
+        this.optionD3 = optionD3;
+        this.correct_answer3 = correct_answer3;
+        this.imageurl3 = imageurl3;
+        this.question4 = question4;
+        this.optionA4 = optionA4;
+        this.optionB4 = optionB4;
+        this.optionC4 = optionC4;
+        this.optionD4 = optionD4;
+        this.correct_answer4 = correct_answer4;
+        this.imageurl4 = imageurl4;
+        this.question5 = question5;
+        this.optionA5 = optionA5;
+        this.optionB5 = optionB5;
+        this.optionC5 = optionC5;
+        this.optionD5 = optionD5;
+        this.correct_answer5 = correct_answer5;
+        this.imageurl5 = imageurl5;
+        this.question6 = question6;
+        this.optionA6 = optionA6;
+        this.optionB6 = optionB6;
+        this.optionC6 = optionC6;
+        this.optionD6 = optionD6;
+        this.correct_answer6 = correct_answer6;
+        this.imageurl6 = imageurl6;
+        this.question7 = question7;
+        this.optionA7 = optionA7;
+        this.optionB7 = optionB7;
+        this.optionC7 = optionC7;
+        this.optionD7 = optionD7;
+        this.correct_answer7 = correct_answer7;
+        this.imageurl7 = imageurl7;
+        this.question8 = question8;
+        this.optionA8 = optionA8;
+        this.optionB8 = optionB8;
+        this.optionC8 = optionC8;
+        this.optionD8 = optionD8;
+        this.correct_answer8 = correct_answer8;
+        this.imageurl8 = imageurl8;
+        this.question9 = question9;
+        this.optionA9 = optionA9;
+        this.optionB9 = optionB9;
+        this.optionC9 = optionC9;
+        this.optionD9 = optionD9;
+        this.correct_answer9 = correct_answer9;
+        this.imageurl9 = imageurl9;
+        this.question10 = question10;
+        this.optionA10 = optionA10;
+        this.optionB10 = optionB10;
+        this.optionC10 = optionC10;
+        this.optionD10 = optionD10;
+        this.correct_answer10 = correct_answer10;
+        this.imageurl10 = imageurl10;
     }
 
     public int getScore() {
@@ -109,6 +185,14 @@ public class QuestionModel implements Serializable
         this.score = score;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getEx_title() {
         return ex_title;
     }
@@ -117,563 +201,563 @@ public class QuestionModel implements Serializable
         this.ex_title = ex_title;
     }
 
-    public String getQues1() {
-        return ques1;
+    public String getQuestion1() {
+        return question1;
     }
 
-    public void setQues1(String ques1) {
-        this.ques1 = ques1;
+    public void setQuestion1(String question1) {
+        this.question1 = question1;
     }
 
-    public String getOpt11() {
-        return opt11;
+    public String getOptionA1() {
+        return optionA1;
     }
 
-    public void setOpt11(String opt11) {
-        this.opt11 = opt11;
+    public void setOptionA1(String optionA1) {
+        this.optionA1 = optionA1;
     }
 
-    public String getOpt12() {
-        return opt12;
+    public String getOptionB1() {
+        return optionB1;
     }
 
-    public void setOpt12(String opt12) {
-        this.opt12 = opt12;
+    public void setOptionB1(String optionB1) {
+        this.optionB1 = optionB1;
     }
 
-    public String getOpt13() {
-        return opt13;
+    public String getOptionC1() {
+        return optionC1;
     }
 
-    public void setOpt13(String opt13) {
-        this.opt13 = opt13;
+    public void setOptionC1(String optionC1) {
+        this.optionC1 = optionC1;
     }
 
-    public String getOpt14() {
-        return opt14;
+    public String getOptionD1() {
+        return optionD1;
     }
 
-    public void setOpt14(String opt14) {
-        this.opt14 = opt14;
+    public void setOptionD1(String optionD1) {
+        this.optionD1 = optionD1;
     }
 
-    public String getCorrectAnswer1() {
-        return correctAnswer1;
+    public String getCorrect_answer1() {
+        return correct_answer1;
     }
 
-    public void setCorrectAnswer1(String correctAnswer1) {
-        this.correctAnswer1 = correctAnswer1;
+    public void setCorrect_answer1(String correct_answer1) {
+        this.correct_answer1 = correct_answer1;
     }
 
-    public String getImg1() {
-        return img1;
+    public String getImageurl1() {
+        return imageurl1;
     }
 
-    public void setImg1(String img1) {
-        this.img1 = img1;
+    public void setImageurl1(String imageurl1) {
+        this.imageurl1 = imageurl1;
     }
 
-    public String getQues2() {
-        return ques2;
+    public String getQuestion2() {
+        return question2;
     }
 
-    public void setQues2(String ques2) {
-        this.ques2 = ques2;
+    public void setQuestion2(String question2) {
+        this.question2 = question2;
     }
 
-    public String getOpt21() {
-        return opt21;
+    public String getOptionA2() {
+        return optionA2;
     }
 
-    public void setOpt21(String opt21) {
-        this.opt21 = opt21;
+    public void setOptionA2(String optionA2) {
+        this.optionA2 = optionA2;
     }
 
-    public String getOpt22() {
-        return opt22;
+    public String getOptionB2() {
+        return optionB2;
     }
 
-    public void setOpt22(String opt22) {
-        this.opt22 = opt22;
+    public void setOptionB2(String optionB2) {
+        this.optionB2 = optionB2;
     }
 
-    public String getOpt23() {
-        return opt23;
+    public String getOptionC2() {
+        return optionC2;
     }
 
-    public void setOpt23(String opt23) {
-        this.opt23 = opt23;
+    public void setOptionC2(String optionC2) {
+        this.optionC2 = optionC2;
     }
 
-    public String getOpt24() {
-        return opt24;
+    public String getOptionD2() {
+        return optionD2;
     }
 
-    public void setOpt24(String opt24) {
-        this.opt24 = opt24;
+    public void setOptionD2(String optionD2) {
+        this.optionD2 = optionD2;
     }
 
-    public String getCorrectAnswer2() {
-        return correctAnswer2;
+    public String getCorrect_answer2() {
+        return correct_answer2;
     }
 
-    public void setCorrectAnswer2(String correctAnswer2) {
-        this.correctAnswer2 = correctAnswer2;
+    public void setCorrect_answer2(String correct_answer2) {
+        this.correct_answer2 = correct_answer2;
     }
 
-    public String getImg2() {
-        return img2;
+    public String getImageurl2() {
+        return imageurl2;
     }
 
-    public void setImg2(String img2) {
-        this.img2 = img2;
+    public void setImageurl2(String imageurl2) {
+        this.imageurl2 = imageurl2;
     }
 
-    public String getQues3() {
-        return ques3;
+    public String getQuestion3() {
+        return question3;
     }
 
-    public void setQues3(String ques3) {
-        this.ques3 = ques3;
+    public void setQuestion3(String question3) {
+        this.question3 = question3;
     }
 
-    public String getOpt31() {
-        return opt31;
+    public String getOptionA3() {
+        return optionA3;
     }
 
-    public void setOpt31(String opt31) {
-        this.opt31 = opt31;
+    public void setOptionA3(String optionA3) {
+        this.optionA3 = optionA3;
     }
 
-    public String getOpt32() {
-        return opt32;
+    public String getOptionB3() {
+        return optionB3;
     }
 
-    public void setOpt32(String opt32) {
-        this.opt32 = opt32;
+    public void setOptionB3(String optionB3) {
+        this.optionB3 = optionB3;
     }
 
-    public String getOpt33() {
-        return opt33;
+    public String getOptionC3() {
+        return optionC3;
     }
 
-    public void setOpt33(String opt33) {
-        this.opt33 = opt33;
+    public void setOptionC3(String optionC3) {
+        this.optionC3 = optionC3;
     }
 
-    public String getOpt34() {
-        return opt34;
+    public String getOptionD3() {
+        return optionD3;
     }
 
-    public void setOpt34(String opt34) {
-        this.opt34 = opt34;
+    public void setOptionD3(String optionD3) {
+        this.optionD3 = optionD3;
     }
 
-    public String getCorrectAnswer3() {
-        return correctAnswer3;
+    public String getCorrect_answer3() {
+        return correct_answer3;
     }
 
-    public void setCorrectAnswer3(String correctAnswer3) {
-        this.correctAnswer3 = correctAnswer3;
+    public void setCorrect_answer3(String correct_answer3) {
+        this.correct_answer3 = correct_answer3;
     }
 
-    public String getImg3() {
-        return img3;
+    public String getImageurl3() {
+        return imageurl3;
     }
 
-    public void setImg3(String img3) {
-        this.img3 = img3;
+    public void setImageurl3(String imageurl3) {
+        this.imageurl3 = imageurl3;
     }
 
-    public String getQues4() {
-        return ques4;
+    public String getQuestion4() {
+        return question4;
     }
 
-    public void setQues4(String ques4) {
-        this.ques4 = ques4;
+    public void setQuestion4(String question4) {
+        this.question4 = question4;
     }
 
-    public String getOpt41() {
-        return opt41;
+    public String getOptionA4() {
+        return optionA4;
     }
 
-    public void setOpt41(String opt41) {
-        this.opt41 = opt41;
+    public void setOptionA4(String optionA4) {
+        this.optionA4 = optionA4;
     }
 
-    public String getOpt42() {
-        return opt42;
+    public String getOptionB4() {
+        return optionB4;
     }
 
-    public void setOpt42(String opt42) {
-        this.opt42 = opt42;
+    public void setOptionB4(String optionB4) {
+        this.optionB4 = optionB4;
     }
 
-    public String getOpt43() {
-        return opt43;
+    public String getOptionC4() {
+        return optionC4;
     }
 
-    public void setOpt43(String opt43) {
-        this.opt43 = opt43;
+    public void setOptionC4(String optionC4) {
+        this.optionC4 = optionC4;
     }
 
-    public String getOpt44() {
-        return opt44;
+    public String getOptionD4() {
+        return optionD4;
     }
 
-    public void setOpt44(String opt44) {
-        this.opt44 = opt44;
+    public void setOptionD4(String optionD4) {
+        this.optionD4 = optionD4;
     }
 
-    public String getCorrectAnswer4() {
-        return correctAnswer4;
+    public String getCorrect_answer4() {
+        return correct_answer4;
     }
 
-    public void setCorrectAnswer4(String correctAnswer4) {
-        this.correctAnswer4 = correctAnswer4;
+    public void setCorrect_answer4(String correct_answer4) {
+        this.correct_answer4 = correct_answer4;
     }
 
-    public String getImg4() {
-        return img4;
+    public String getImageurl4() {
+        return imageurl4;
     }
 
-    public void setImg4(String img4) {
-        this.img4 = img4;
+    public void setImageurl4(String imageurl4) {
+        this.imageurl4 = imageurl4;
     }
 
-    public String getQues5() {
-        return ques5;
+    public String getQuestion5() {
+        return question5;
     }
 
-    public void setQues5(String ques5) {
-        this.ques5 = ques5;
+    public void setQuestion5(String question5) {
+        this.question5 = question5;
     }
 
-    public String getOpt51() {
-        return opt51;
+    public String getOptionA5() {
+        return optionA5;
     }
 
-    public void setOpt51(String opt51) {
-        this.opt51 = opt51;
+    public void setOptionA5(String optionA5) {
+        this.optionA5 = optionA5;
     }
 
-    public String getOpt52() {
-        return opt52;
+    public String getOptionB5() {
+        return optionB5;
     }
 
-    public void setOpt52(String opt52) {
-        this.opt52 = opt52;
+    public void setOptionB5(String optionB5) {
+        this.optionB5 = optionB5;
     }
 
-    public String getOpt53() {
-        return opt53;
+    public String getOptionC5() {
+        return optionC5;
     }
 
-    public void setOpt53(String opt53) {
-        this.opt53 = opt53;
+    public void setOptionC5(String optionC5) {
+        this.optionC5 = optionC5;
     }
 
-    public String getOpt54() {
-        return opt54;
+    public String getOptionD5() {
+        return optionD5;
     }
 
-    public void setOpt54(String opt54) {
-        this.opt54 = opt54;
+    public void setOptionD5(String optionD5) {
+        this.optionD5 = optionD5;
     }
 
-    public String getCorrectAnswer5() {
-        return correctAnswer5;
+    public String getCorrect_answer5() {
+        return correct_answer5;
     }
 
-    public void setCorrectAnswer5(String correctAnswer5) {
-        this.correctAnswer5 = correctAnswer5;
+    public void setCorrect_answer5(String correct_answer5) {
+        this.correct_answer5 = correct_answer5;
     }
 
-    public String getImg5() {
-        return img5;
+    public String getImageurl5() {
+        return imageurl5;
     }
 
-    public void setImg5(String img5) {
-        this.img5 = img5;
+    public void setImageurl5(String imageurl5) {
+        this.imageurl5 = imageurl5;
     }
 
-    public String getQues6() {
-        return ques6;
+    public String getQuestion6() {
+        return question6;
     }
 
-    public void setQues6(String ques6) {
-        this.ques6 = ques6;
+    public void setQuestion6(String question6) {
+        this.question6 = question6;
     }
 
-    public String getOpt61() {
-        return opt61;
+    public String getOptionA6() {
+        return optionA6;
     }
 
-    public void setOpt61(String opt61) {
-        this.opt61 = opt61;
+    public void setOptionA6(String optionA6) {
+        this.optionA6 = optionA6;
     }
 
-    public String getOpt62() {
-        return opt62;
+    public String getOptionB6() {
+        return optionB6;
     }
 
-    public void setOpt62(String opt62) {
-        this.opt62 = opt62;
+    public void setOptionB6(String optionB6) {
+        this.optionB6 = optionB6;
     }
 
-    public String getOpt63() {
-        return opt63;
+    public String getOptionC6() {
+        return optionC6;
     }
 
-    public void setOpt63(String opt63) {
-        this.opt63 = opt63;
+    public void setOptionC6(String optionC6) {
+        this.optionC6 = optionC6;
     }
 
-    public String getOpt64() {
-        return opt64;
+    public String getOptionD6() {
+        return optionD6;
     }
 
-    public void setOpt64(String opt64) {
-        this.opt64 = opt64;
+    public void setOptionD6(String optionD6) {
+        this.optionD6 = optionD6;
     }
 
-    public String getCorrectAnswer6() {
-        return correctAnswer6;
+    public String getCorrect_answer6() {
+        return correct_answer6;
     }
 
-    public void setCorrectAnswer6(String correctAnswer6) {
-        this.correctAnswer6 = correctAnswer6;
+    public void setCorrect_answer6(String correct_answer6) {
+        this.correct_answer6 = correct_answer6;
     }
 
-    public String getImg6() {
-        return img6;
+    public String getImageurl6() {
+        return imageurl6;
     }
 
-    public void setImg6(String img6) {
-        this.img6 = img6;
+    public void setImageurl6(String imageurl6) {
+        this.imageurl6 = imageurl6;
     }
 
-    public String getQues7() {
-        return ques7;
+    public String getQuestion7() {
+        return question7;
     }
 
-    public void setQues7(String ques7) {
-        this.ques7 = ques7;
+    public void setQuestion7(String question7) {
+        this.question7 = question7;
     }
 
-    public String getOpt71() {
-        return opt71;
+    public String getOptionA7() {
+        return optionA7;
     }
 
-    public void setOpt71(String opt71) {
-        this.opt71 = opt71;
+    public void setOptionA7(String optionA7) {
+        this.optionA7 = optionA7;
     }
 
-    public String getOpt72() {
-        return opt72;
+    public String getOptionB7() {
+        return optionB7;
     }
 
-    public void setOpt72(String opt72) {
-        this.opt72 = opt72;
+    public void setOptionB7(String optionB7) {
+        this.optionB7 = optionB7;
     }
 
-    public String getOpt73() {
-        return opt73;
+    public String getOptionC7() {
+        return optionC7;
     }
 
-    public void setOpt73(String opt73) {
-        this.opt73 = opt73;
+    public void setOptionC7(String optionC7) {
+        this.optionC7 = optionC7;
     }
 
-    public String getOpt74() {
-        return opt74;
+    public String getOptionD7() {
+        return optionD7;
     }
 
-    public void setOpt74(String opt74) {
-        this.opt74 = opt74;
+    public void setOptionD7(String optionD7) {
+        this.optionD7 = optionD7;
     }
 
-    public String getCorrectAnswer7() {
-        return correctAnswer7;
+    public String getCorrect_answer7() {
+        return correct_answer7;
     }
 
-    public void setCorrectAnswer7(String correctAnswer7) {
-        this.correctAnswer7 = correctAnswer7;
+    public void setCorrect_answer7(String correct_answer7) {
+        this.correct_answer7 = correct_answer7;
     }
 
-    public String getImg7() {
-        return img7;
+    public String getImageurl7() {
+        return imageurl7;
     }
 
-    public void setImg7(String img7) {
-        this.img7 = img7;
+    public void setImageurl7(String imageurl7) {
+        this.imageurl7 = imageurl7;
     }
 
-    public String getQues8() {
-        return ques8;
+    public String getQuestion8() {
+        return question8;
     }
 
-    public void setQues8(String ques8) {
-        this.ques8 = ques8;
+    public void setQuestion8(String question8) {
+        this.question8 = question8;
     }
 
-    public String getOpt81() {
-        return opt81;
+    public String getOptionA8() {
+        return optionA8;
     }
 
-    public void setOpt81(String opt81) {
-        this.opt81 = opt81;
+    public void setOptionA8(String optionA8) {
+        this.optionA8 = optionA8;
     }
 
-    public String getOpt82() {
-        return opt82;
+    public String getOptionB8() {
+        return optionB8;
     }
 
-    public void setOpt82(String opt82) {
-        this.opt82 = opt82;
+    public void setOptionB8(String optionB8) {
+        this.optionB8 = optionB8;
     }
 
-    public String getOpt83() {
-        return opt83;
+    public String getOptionC8() {
+        return optionC8;
     }
 
-    public void setOpt83(String opt83) {
-        this.opt83 = opt83;
+    public void setOptionC8(String optionC8) {
+        this.optionC8 = optionC8;
     }
 
-    public String getOpt84() {
-        return opt84;
+    public String getOptionD8() {
+        return optionD8;
     }
 
-    public void setOpt84(String opt84) {
-        this.opt84 = opt84;
+    public void setOptionD8(String optionD8) {
+        this.optionD8 = optionD8;
     }
 
-    public String getCorrectAnswer8() {
-        return correctAnswer8;
+    public String getCorrect_answer8() {
+        return correct_answer8;
     }
 
-    public void setCorrectAnswer8(String correctAnswer8) {
-        this.correctAnswer8 = correctAnswer8;
+    public void setCorrect_answer8(String correct_answer8) {
+        this.correct_answer8 = correct_answer8;
     }
 
-    public String getImg8() {
-        return img8;
+    public String getImageurl8() {
+        return imageurl8;
     }
 
-    public void setImg8(String img8) {
-        this.img8 = img8;
+    public void setImageurl8(String imageurl8) {
+        this.imageurl8 = imageurl8;
     }
 
-    public String getQues9() {
-        return ques9;
+    public String getQuestion9() {
+        return question9;
     }
 
-    public void setQues9(String ques9) {
-        this.ques9 = ques9;
+    public void setQuestion9(String question9) {
+        this.question9 = question9;
     }
 
-    public String getOpt91() {
-        return opt91;
+    public String getOptionA9() {
+        return optionA9;
     }
 
-    public void setOpt91(String opt91) {
-        this.opt91 = opt91;
+    public void setOptionA9(String optionA9) {
+        this.optionA9 = optionA9;
     }
 
-    public String getOpt92() {
-        return opt92;
+    public String getOptionB9() {
+        return optionB9;
     }
 
-    public void setOpt92(String opt92) {
-        this.opt92 = opt92;
+    public void setOptionB9(String optionB9) {
+        this.optionB9 = optionB9;
     }
 
-    public String getOpt93() {
-        return opt93;
+    public String getOptionC9() {
+        return optionC9;
     }
 
-    public void setOpt93(String opt93) {
-        this.opt93 = opt93;
+    public void setOptionC9(String optionC9) {
+        this.optionC9 = optionC9;
     }
 
-    public String getOpt94() {
-        return opt94;
+    public String getOptionD9() {
+        return optionD9;
     }
 
-    public void setOpt94(String opt94) {
-        this.opt94 = opt94;
+    public void setOptionD9(String optionD9) {
+        this.optionD9 = optionD9;
     }
 
-    public String getCorrectAnswer9() {
-        return correctAnswer9;
+    public String getCorrect_answer9() {
+        return correct_answer9;
     }
 
-    public void setCorrectAnswer9(String correctAnswer9) {
-        this.correctAnswer9 = correctAnswer9;
+    public void setCorrect_answer9(String correct_answer9) {
+        this.correct_answer9 = correct_answer9;
     }
 
-    public String getImg9() {
-        return img9;
+    public String getImageurl9() {
+        return imageurl9;
     }
 
-    public void setImg9(String img9) {
-        this.img9 = img9;
+    public void setImageurl9(String imageurl9) {
+        this.imageurl9 = imageurl9;
     }
 
-    public String getQues10() {
-        return ques10;
+    public String getQuestion10() {
+        return question10;
     }
 
-    public void setQues10(String ques10) {
-        this.ques10 = ques10;
+    public void setQuestion10(String question10) {
+        this.question10 = question10;
     }
 
-    public String getOpt101() {
-        return opt101;
+    public String getOptionA10() {
+        return optionA10;
     }
 
-    public void setOpt101(String opt101) {
-        this.opt101 = opt101;
+    public void setOptionA10(String optionA10) {
+        this.optionA10 = optionA10;
     }
 
-    public String getOpt102() {
-        return opt102;
+    public String getOptionB10() {
+        return optionB10;
     }
 
-    public void setOpt102(String opt102) {
-        this.opt102 = opt102;
+    public void setOptionB10(String optionB10) {
+        this.optionB10 = optionB10;
     }
 
-    public String getOpt103() {
-        return opt103;
+    public String getOptionC10() {
+        return optionC10;
     }
 
-    public void setOpt103(String opt103) {
-        this.opt103 = opt103;
+    public void setOptionC10(String optionC10) {
+        this.optionC10 = optionC10;
     }
 
-    public String getOpt104() {
-        return opt104;
+    public String getOptionD10() {
+        return optionD10;
     }
 
-    public void setOpt104(String opt104) {
-        this.opt104 = opt104;
+    public void setOptionD10(String optionD10) {
+        this.optionD10 = optionD10;
     }
 
-    public String getCorrectAnswer10() {
-        return correctAnswer10;
+    public String getCorrect_answer10() {
+        return correct_answer10;
     }
 
-    public void setCorrectAnswer10(String correctAnswer10) {
-        this.correctAnswer10 = correctAnswer10;
+    public void setCorrect_answer10(String correct_answer10) {
+        this.correct_answer10 = correct_answer10;
     }
 
-    public String getImg10() {
-        return img10;
+    public String getImageurl10() {
+        return imageurl10;
     }
 
-    public void setImg10(String img10) {
-        this.img10 = img10;
+    public void setImageurl10(String imageurl10) {
+        this.imageurl10 = imageurl10;
     }
 }

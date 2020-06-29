@@ -4,6 +4,7 @@ public class ChatModel
 {
     String msg,uid;
 
+
     public ChatModel() {
     }
 

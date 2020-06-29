@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TeacherApp.TeacherExams.AddExamActivity">
-
+    tools:context=".TeacherApp.TeacherExams.ViewExamActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -35,14 +33,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:textSize="22sp"
-                android:hint="اسم الامتحان"
-                android:background="@drawable/edittext_corners"
-                android:padding="20dp"
+                android:textSize="26sp"
+                android:text="exam title"
+                android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الأول"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
 
             <EditText
                 android:id="@+id/txt_ques1"
@@ -50,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/edittext_corners"
-                android:hint=" السؤال الأول"
+                android:text=" Question 1"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
@@ -60,6 +71,16 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/edit_img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img1"
@@ -157,6 +178,20 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الثانى"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
 
             <EditText
                 android:id="@+id/txt_ques2"
@@ -165,16 +200,26 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint=" السؤال الثانى"
+                android:text=" Question 2"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/edit_img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img2"
@@ -272,6 +317,20 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الثالث"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
 
             <EditText
                 android:id="@+id/txt_ques3"
@@ -280,17 +339,26 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint=" السؤال الثالث"
+                android:text=" Question 3"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
 
+            <ImageView
+                android:id="@+id/edit_img3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img3"
@@ -387,6 +455,21 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الرابع"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+
             <EditText
                 android:id="@+id/txt_ques4"
                 android:layout_width="match_parent"
@@ -394,8 +477,8 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint=" السؤال الرابع"
-                android:padding="20dp"
+                android:text=" Question 4"
+                android:padding="10dp"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
@@ -404,6 +487,17 @@
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+
+            <ImageView
+                android:id="@+id/edit_img4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img4"
@@ -500,6 +594,21 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الخامس"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+
             <EditText
                 android:id="@+id/txt_ques5"
                 android:layout_width="match_parent"
@@ -507,16 +616,26 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint="السؤال الخامس"
+                android:text="Question 5"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/edit_img5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img5"
@@ -614,6 +733,20 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال السادس"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                />
 
             <EditText
                 android:id="@+id/txt_ques6"
@@ -622,16 +755,26 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint="السؤال السادس"
+                android:text=" Question 6"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/edit_img6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img6"
@@ -728,6 +871,20 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال السابع"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
 
             <EditText
                 android:id="@+id/txt_ques7"
@@ -736,16 +893,26 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint="السؤال السابع"
+                android:text=" Question 7"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/edit_img7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img7"
@@ -842,6 +1009,21 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال الثامن"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
             <EditText
                 android:id="@+id/txt_ques8"
                 android:layout_width="match_parent"
@@ -849,16 +1031,26 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint="السؤال الثامن"
+                android:text=" Question 8"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/edit_img8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img8"
@@ -955,6 +1147,21 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال التاسع"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
             <EditText
                 android:id="@+id/txt_ques9"
                 android:layout_width="match_parent"
@@ -962,16 +1169,26 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint="السؤال التاسع"
+                android:text=" Question 9"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/edit_img9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img9"
@@ -1068,6 +1285,21 @@
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السؤال العاشر"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                />
+
             <EditText
                 android:id="@+id/txt_ques10"
                 android:layout_width="match_parent"
@@ -1075,16 +1307,26 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_corners"
-                android:hint="السؤال العاشر"
+                android:text=" Question 10"
                 android:inputType="textMultiLine"
                 android:scrollbars="vertical"
                 android:textSize="18sp"
                 android:textColor="#000"
-                android:padding="20dp"
+                android:padding="10dp"
                 android:textDirection="rtl"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/edit_img10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:id="@+id/img10"
@@ -1188,7 +1430,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorAccent"
-                    android:text="حفظ الامتحان"
+                    android:text="حفظ التعديلات"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
